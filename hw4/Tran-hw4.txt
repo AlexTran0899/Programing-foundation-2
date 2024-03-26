@@ -1,0 +1,63 @@
+Script started on 2023-03-07 21:35:56-0600
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ script Tran-Hw-3.txtg++ -std=c++11 -Wall main.cpp password.cpp -o main.exe
+[01m[Kg++:[m[K [01;31m[Kerror: [m[Kpassword.cpp: No such file or directory
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ g++ -std-[K= [K+c[Kc[K[Kc++11 -Wall ma[Kain,c[K[K.cpp quye[K[Ku[Keue.cpp stack.cpp.[K -o ./ main.exe
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ g++ -std=c++11 -Wall main.cpp queue.cpp stack.cpp -o ./mmain.exe[K[K[K[K[K[K[K[A]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls
+main.cpp  [0m[01;32mmain.exe[0m  queue.cpp  queue.h  stack.cpp  stack.h  Tran-hw4.txt
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ ./main.exe
+Stack run time: 0.000103 seconds
+Queue run time: 0.000274 seconds
+
+Stack run time: 0.000966 seconds
+Queue run time: 0.002628 seconds
+
+Stack run time: 0.003259 seconds
+Queue run time: 0.013332 seconds
+
+Stack run time: 0.327076 seconds
+Queue run time: 3.36201 seconds
+
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ ./main.exe
+Stack run time: 0.000103 seconds
+Queue run time: 0.000262 seconds
+
+Stack run time: 0.000966 seconds
+Queue run time: 0.002626 seconds
+
+Stack run time: 0.00332 seconds
+Queue run time: 0.01454 seconds
+
+Stack run time: 0.337473 seconds
+Queue run time: 2.54645 seconds
+
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ ./main.exe
+Stack run time: 0.000104 seconds
+Queue run time: 0.000253 seconds
+
+Stack run time: 0.000948 seconds
+Queue run time: 0.002573 seconds
+
+Stack run time: 0.004775 seconds
+Queue run time: 0.014477 seconds
+
+Stack run time: 0.33591 seconds
+Queue run time: 2.06905 seconds
+
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ ei[Kx[K[K./main.exe
+Stack run time: 0.000102 seconds
+Queue run time: 0.00028 seconds
+
+Stack run time: 0.000958 seconds
+Queue run time: 0.002605 seconds
+
+Stack run time: 0.003277 seconds
+Queue run time: 0.016047 seconds
+
+Stack run time: 0.328154 seconds
+Queue run time: 2.68907 seconds
+
+]0;phtran@turing: ~/pf2/hw4[01;32mphtran@turing[00m:[01;34m~/pf2/hw4[00m$ exit
+exit
+
+Script done on 2023-03-07 21:37:12-0600

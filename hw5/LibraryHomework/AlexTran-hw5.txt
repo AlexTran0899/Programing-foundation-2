@@ -1,0 +1,764 @@
+Script started on 2023-04-08 19:54:53-0500
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ g++ -std=c++11 -Wall main.cpp Book.cpp  -o hw5.exe
+[01m[Kmain.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kbook.h: No such file or directory
+ #include [01;31m[K"book.h"[m[K
+          [01;31m[K^~~~~~~~[m[K
+compilation terminated.
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ g++ -std=c++11 -Wall main.cpp Book.cpp --o hw5.exe[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+AlexTran-hw5.txt  books.csv          insertion_sort.csv  quick_sort.csv
+Book.cpp          [0m[01;34mcmake-build-debug[0m  main.cpp            selection_sort.csv
+Book.h            CMakeLists.txt     merge_sort.csv
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim book[K[K[K[Kmain.cpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"main.cpp" [noeol] 175L, 5001C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m// Created by Alex Tran
+// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m
+[35m#include [m[31m"book.h"[m
+[35m#include [m[31m<fstream>[m
+
+[34m// function prototype[m
+[32mvoid[m readFile(vector<Book> & library);
+[32mvoid[m writeFile(vector<Book> &library, string type);
+[32mvoid[m insertion_sort(vector<Book> & library);
+[32mvoid[m selection_sort(vector<Book> & library);
+vector<Book> merge_sort(vector<Book> & library);
+[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);
+Book stringToBookParser([32mconst[m string & str);
+
+[32mint[m main(){
+    vector<Book> library;
+    readFile(library);[19;5H[32mclock_t[m start = clock();
+    insertion_sort(library);
+    [32mclock_t[m end = clock();
+    [32mdouble[m runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);
+    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <[23;1H[94m@@@                                                                             [m[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [2;1H[24;63H2[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [3;1H[24;63H3[3;1H[?25h[?25l[24;53Hi[3;1H[24;53H [3;1H[24;1H[1m-- INSERT --[m[24;13H[K[24;63H3,1[11CTop[3;1H[?25h[?25l[24;65H2[3;2H[?25h[?25l[24;65H3[3;3H[?25h[?25l[24;65H4[3;4H[?25h[?25l[24;65H5[3;5H[?25h[?25l[24;65H6[3;6H[?25h[?25l[24;65H7[3;7H[?25h[?25l[24;65H8[3;8H[?25h[?25l[24;65H9[3;9H[?25h[?25l[24;65H10[3;10H[?25h[?25l[24;66H1[3;11H[?25h[?25l[24;66H2[3;12H[?25h[?25l[31mook.h"[m[3;17H[K[24;66H1[3;11H[?25h[?25l[31mBook.h"[m[24;66H2[3;12H[?25h[?25l[31m:ook.h"[m[24;66H3[3;13H[?25h[?25l[31mook.h"[m[3;18H[K[24;66H2[3;12H[?25h[24;1H[K[3;11H[?25l[24;53H^[[3;11H[24;53H  [3;12H[24;63H3,11[10CTop[3;11H[?25h[?25l[24;53H:[3;11H[24;53H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"main.cpp" 175L, 5002C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim main.cppls[Kg++ -std=c++11 -Wall main.cpp Book.cpp --o hw5.exe
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> & library);
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:7:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> & library);
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:7:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K & library);
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:7:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> & [01;31m[Klibrary[m[K);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type);
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:8:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type);
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:8:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type);
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:8:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K);
+                                              [01;31m[K^~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:9:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:9:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:9:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:10:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:10:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:10:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library);
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:12:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:12:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K & library, int low, int high);
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> & [01;31m[Klibrary[m[K, int low, int high);
+                                [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:12:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, [01;31m[Kint[m[K low, int high);
+                                         [01;31m[K^~~[m[K
+[01m[Kmain.cpp:12:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, int low, [01;31m[Kint[m[K high);
+                                                  [01;31m[K^~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[Kmain.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     [01;31m[Kvector[m[K<Book> library;
+     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:16:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+     [01;36m[Kvector[m[K<Book> library;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kperror[m[K
+[01m[Kmain.cpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector<Book[01;31m[K>[m[K library;
+                [01;31m[K^[m[K
+[01m[Kmain.cpp:16:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+     vector<Book> [01;31m[Klibrary[m[K;
+                  [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KreadFile[m[K’ was not declared in this scope
+     [01;31m[KreadFile[m[K(library);
+     [01;31m[K^~~~~~~~[m[K
+[01m[Kmain.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsertion_sort[m[K’ was not declared in this scope
+     [01;31m[Kinsertion_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:24:5:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteFile[m[K’ was not declared in this scope
+     [01;31m[KwriteFile[m[K(library, "insertion_sort");
+     [01;31m[K^~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kselection_sort[m[K’ was not declared in this scope
+     [01;31m[Kselection_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksuseconds_t[m[K’
+     [01;36m[Kselection_sort[m[K(library);
+     [01;36m[K^~~~~~~~~~~~~~[m[K
+     [32m[Ksuseconds_t[m[K
+[01m[Kmain.cpp:34:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kmerge_sort[m[K’ was not declared in this scope
+     library = [01;31m[Kmerge_sort[m[K(library);
+               [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kquick_sort[m[K’ was not declared in this scope
+     [01;31m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kquick_exit[m[K’
+     [01;36m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;36m[K^~~~~~~~~~[m[K
+     [32m[Kquick_exit[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:57:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:57:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:57:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:68:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:68:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:68:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:80:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge(vector<Book> & a, vector<Book> & b) {
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:101:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library){
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+ int partition([01;31m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ int partition([01;36m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:111:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ int partition(vector<Book[01;31m[K>[m[K & arr, int low , int high) {
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:111:30:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
+ int partition(vector<Book> & [01;31m[Karr[m[K, int low , int high) {
+                              [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:35:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, [01;31m[Kint[m[K low , int high) {
+                                   [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, int low , [01;31m[Kint[m[K high) {
+                                             [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:53:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ int partition(vector<Book> & arr, int low , int high[01;31m[K)[m[K {
+                                                     [01;31m[K^[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:125:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:125:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K &library, int low, int high){
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:125:31:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> &[01;31m[Klibrary[m[K, int low, int high){
+                               [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:125:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, [01;31m[Kint[m[K low, int high){
+                                        [01;31m[K^~~[m[K
+[01m[Kmain.cpp:125:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, int low, [01;31m[Kint[m[K high){
+                                                 [01;31m[K^~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> &library){
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:133:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> &library){
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:133:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K &library){
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:133:29:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> &[01;31m[Klibrary[m[K){
+                             [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[KBook stringToBookParser(const string&)[m[K’:
+[01m[Kmain.cpp:153:22:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     for(int i = 0; [01;35m[Ki < str.size()[m[K; i++) {
+                    [01;35m[K~~^~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type) {
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:164:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type) {
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:164:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type) {
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type) {
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K) {
+                                              [01;31m[K^~~~[m[K
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ g++ -std=c++11 -Wall main.cpp Book.cpp --o hw5.exe
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> & library);
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:7:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> & library);
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:7:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K & library);
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:7:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> & [01;31m[Klibrary[m[K);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type);
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:8:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type);
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:8:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type);
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:8:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K);
+                                              [01;31m[K^~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:9:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:9:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:9:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:10:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:10:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:10:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library);
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:12:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:12:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K & library, int low, int high);
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> & [01;31m[Klibrary[m[K, int low, int high);
+                                [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:12:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, [01;31m[Kint[m[K low, int high);
+                                         [01;31m[K^~~[m[K
+[01m[Kmain.cpp:12:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, int low, [01;31m[Kint[m[K high);
+                                                  [01;31m[K^~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[Kmain.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     [01;31m[Kvector[m[K<Book> library;
+     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:16:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+     [01;36m[Kvector[m[K<Book> library;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kperror[m[K
+[01m[Kmain.cpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector<Book[01;31m[K>[m[K library;
+                [01;31m[K^[m[K
+[01m[Kmain.cpp:16:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+     vector<Book> [01;31m[Klibrary[m[K;
+                  [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KreadFile[m[K’ was not declared in this scope
+     [01;31m[KreadFile[m[K(library);
+     [01;31m[K^~~~~~~~[m[K
+[01m[Kmain.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsertion_sort[m[K’ was not declared in this scope
+     [01;31m[Kinsertion_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:24:5:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteFile[m[K’ was not declared in this scope
+     [01;31m[KwriteFile[m[K(library, "insertion_sort");
+     [01;31m[K^~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kselection_sort[m[K’ was not declared in this scope
+     [01;31m[Kselection_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksuseconds_t[m[K’
+     [01;36m[Kselection_sort[m[K(library);
+     [01;36m[K^~~~~~~~~~~~~~[m[K
+     [32m[Ksuseconds_t[m[K
+[01m[Kmain.cpp:34:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kmerge_sort[m[K’ was not declared in this scope
+     library = [01;31m[Kmerge_sort[m[K(library);
+               [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kquick_sort[m[K’ was not declared in this scope
+     [01;31m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kquick_exit[m[K’
+     [01;36m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;36m[K^~~~~~~~~~[m[K
+     [32m[Kquick_exit[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:57:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:57:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:57:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:68:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:68:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:68:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:80:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge(vector<Book> & a, vector<Book> & b) {
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:101:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library){
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+ int partition([01;31m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ int partition([01;36m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:111:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ int partition(vector<Book[01;31m[K>[m[K & arr, int low , int high) {
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:111:30:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
+ int partition(vector<Book> & [01;31m[Karr[m[K, int low , int high) {
+                              [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:35:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, [01;31m[Kint[m[K low , int high) {
+                                   [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, int low , [01;31m[Kint[m[K high) {
+                                             [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:53:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ int partition(vector<Book> & arr, int low , int high[01;31m[K)[m[K {
+                                                     [01;31m[K^[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:125:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:125:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K &library, int low, int high){
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:125:31:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> &[01;31m[Klibrary[m[K, int low, int high){
+                               [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:125:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, [01;31m[Kint[m[K low, int high){
+                                        [01;31m[K^~~[m[K
+[01m[Kmain.cpp:125:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, int low, [01;31m[Kint[m[K high){
+                                                 [01;31m[K^~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> &library){
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:133:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> &library){
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:133:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K &library){
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:133:29:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> &[01;31m[Klibrary[m[K){
+                             [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[KBook stringToBookParser(const string&)[m[K’:
+[01m[Kmain.cpp:153:22:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     for(int i = 0; [01;35m[Ki < str.size()[m[K; i++) {
+                    [01;35m[K~~^~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type) {
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:164:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type) {
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:164:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type) {
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type) {
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K) {
+                                              [01;31m[K^~~~[m[K
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ la[Ks
+AlexTran-hw5.txt  books.csv          insertion_sort.csv  quick_sort.csv
+Book.cpp          [0m[01;34mcmake-build-debug[0m  main.cpp            selection_sort.csv
+Book.h            CMakeLists.txt     merge_sort.csv
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ lsg++ -std=c++11 -Wall main.cpp Book.cpp --o hw5.exe[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o[1P hw5.exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o [1Phw5.exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o h[1Pw5.exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw[1P5.exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw5[1P.exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw5.[1Pexe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw5.e[1Pxe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw5.ex[1Pe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C[C -Wall main.cpp Book.cpp -o hw5.exe[K[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ [C[C[C[C[C -Wall main.cpp Book.cpp -o hw5.exe [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1@ 
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> & library);
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:7:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> & library);
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:7:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K & library);
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:7:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> & [01;31m[Klibrary[m[K);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type);
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:8:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type);
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:8:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type);
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:8:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K);
+                                              [01;31m[K^~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:9:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:9:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:9:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:10:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:10:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:10:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library);
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:12:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:12:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K & library, int low, int high);
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> & [01;31m[Klibrary[m[K, int low, int high);
+                                [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:12:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, [01;31m[Kint[m[K low, int high);
+                                         [01;31m[K^~~[m[K
+[01m[Kmain.cpp:12:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, int low, [01;31m[Kint[m[K high);
+                                                  [01;31m[K^~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[Kmain.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     [01;31m[Kvector[m[K<Book> library;
+     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:16:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+     [01;36m[Kvector[m[K<Book> library;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kperror[m[K
+[01m[Kmain.cpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector<Book[01;31m[K>[m[K library;
+                [01;31m[K^[m[K
+[01m[Kmain.cpp:16:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+     vector<Book> [01;31m[Klibrary[m[K;
+                  [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KreadFile[m[K’ was not declared in this scope
+     [01;31m[KreadFile[m[K(library);
+     [01;31m[K^~~~~~~~[m[K
+[01m[Kmain.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsertion_sort[m[K’ was not declared in this scope
+     [01;31m[Kinsertion_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:24:5:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteFile[m[K’ was not declared in this scope
+     [01;31m[KwriteFile[m[K(library, "insertion_sort");
+     [01;31m[K^~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kselection_sort[m[K’ was not declared in this scope
+     [01;31m[Kselection_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksuseconds_t[m[K’
+     [01;36m[Kselection_sort[m[K(library);
+     [01;36m[K^~~~~~~~~~~~~~[m[K
+     [32m[Ksuseconds_t[m[K
+[01m[Kmain.cpp:34:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kmerge_sort[m[K’ was not declared in this scope
+     library = [01;31m[Kmerge_sort[m[K(library);
+               [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kquick_sort[m[K’ was not declared in this scope
+     [01;31m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kquick_exit[m[K’
+     [01;36m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;36m[K^~~~~~~~~~[m[K
+     [32m[Kquick_exit[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:57:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:57:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:57:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:68:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:68:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:68:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:80:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge(vector<Book> & a, vector<Book> & b) {
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:101:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library){
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+ int partition([01;31m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ int partition([01;36m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:111:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ int partition(vector<Book[01;31m[K>[m[K & arr, int low , int high) {
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:111:30:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
+ int partition(vector<Book> & [01;31m[Karr[m[K, int low , int high) {
+                              [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:35:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, [01;31m[Kint[m[K low , int high) {
+                                   [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, int low , [01;31m[Kint[m[K high) {
+                                             [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:53:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ int partition(vector<Book> & arr, int low , int high[01;31m[K)[m[K {
+                                                     [01;31m[K^[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:125:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:125:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K &library, int low, int high){
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:125:31:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> &[01;31m[Klibrary[m[K, int low, int high){
+                               [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:125:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, [01;31m[Kint[m[K low, int high){
+                                        [01;31m[K^~~[m[K
+[01m[Kmain.cpp:125:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, int low, [01;31m[Kint[m[K high){
+                                                 [01;31m[K^~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> &library){
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:133:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> &library){
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:133:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K &library){
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:133:29:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> &[01;31m[Klibrary[m[K){
+                             [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type) {
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:164:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type) {
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:164:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type) {
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type) {
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K) {
+                                              [01;31m[K^~~~[m[K
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ cd ..
+]0;phtran@turing: ~/pf2/hw5[01;32mphtran@turing[00m:[01;34m~/pf2/hw5[00m$ ls
+[0m[01;34mLibraryHomework[0m
+]0;phtran@turing: ~/pf2/hw5[01;32mphtran@turing[00m:[01;34m~/pf2/hw5[00m$ cd LibraryHomework/
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ cd LibraryHomework/ls[Kcd ..[3Pls
+AlexTran-hw5.txt  books.csv          insertion_sort.csv  quick_sort.csv
+Book.cpp          [0m[01;34mcmake-build-debug[0m  main.cpp            selection_sort.csv
+Book.h            CMakeLists.txt     merge_sort.csv
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ exit
+exit
+
+Script done on 2023-04-08 20:00:50-0500

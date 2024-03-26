@@ -1,0 +1,143 @@
+Script started on 2023-02-11 20:19:54-0600
+]0;phtran@turing: ~/pf2/hw2/Restaurant[01;32mphtran@turing[00m:[01;34m~/pf2/hw2/Restaurant[00m$ ls
+[0m[01;32mhw2.exe[0m   RestaurantList.cpp  RestaurantNode.cpp  Tran-Hw2.txt
+main.cpp  RestaurantList.h    RestaurantNode.h
+]0;phtran@turing: ~/pf2/hw2/Restaurant[01;32mphtran@turing[00m:[01;34m~/pf2/hw2/Restaurant[00m$ ./main[K[K[K[K[K/hw2.exe
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+1
+ID   Name                     Rating         Item                     Type           Price          
+1    Khana Indian Grill       4.70           Chole                    Indian         12.00          
+0    Khana Indian Grill       4.70           Chicken Tika Masala      Indian         13.55          
+2    Khana Indian Grill       4.70           Super Indian             Indian         26.00          
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+2
+Please enter restaurant name: c Chipotle
+Restaurant rating: 4.2
+Meal name: High protien   ein bowl                 High Protien   ein Bowl
+Meal type: Salad     salad
+Meal price: 12.90
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+1
+ID   Name                     Rating         Item                     Type           Price          
+1    Khana Indian Grill       4.70           Chole                    Indian         12.00          
+3    Chipotle                 4.20           High Protein Bowl        salad          12.90          
+0    Khana Indian Grill       4.70           Chicken Tika Masala      Indian         13.55          
+2    Khana Indian Grill       4.70           Super Indian             Indian         26.00          
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+3
+Please enter item ID: 1
+Please enter item new price: 100
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+1
+ID   Name                     Rating         Item                     Type           Price          
+3    Chipotle                 4.20           High Protein Bowl        salad          12.90          
+0    Khana Indian Grill       4.70           Chicken Tika Masala      Indian         13.55          
+2    Khana Indian Grill       4.70           Super Indian             Indian         26.00          
+1    Khana Indian Grill       4.70           Chole                    Indian         100.00         
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+4
+highest price: 100.00
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+3
+Please enter item ID: 20  3
+Please enter item new price: 20
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+1
+ID   Name                     Rating         Item                     Type           Price          
+0    Khana Indian Grill       4.70           Chicken Tika Masala      Indian         13.55          
+3    Chipotle                 4.20           High Protein Bowl        salad          20.00          
+2    Khana Indian Grill       4.70           Super Indian             Indian         26.00          
+1    Khana Indian Grill       4.70           Chole                    Indian         100.00         
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+3
+Please enter item ID: 2
+Please enter item new price: 1000
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+3 4 1
+ID   Name                     Rating         Item                     Type           Price          
+0    Khana Indian Grill       4.70           Chicken Tika Masala      Indian         13.55          
+3    Chipotle                 4.20           High Protein Bowl        salad          20.00          
+1    Khana Indian Grill       4.70           Chole                    Indian         100.00         
+2    Khana Indian Grill       4.70           Super Indian             Indian         1000.00        
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+4
+highest price: 1000.00
+
+Please select one of the following: 
+1: Print all item.
+2: Add item.
+3: change an item price.
+4: Print highest price.
+0: Exit the program.
+0
+goodbye...
+]0;phtran@turing: ~/pf2/hw2/Restaurant[01;32mphtran@turing[00m:[01;34m~/pf2/hw2/Restaurant[00m$ ext[K[K[Kexit
+exit
+
+Script done on 2023-02-11 20:21:57-0600

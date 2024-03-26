@@ -1,0 +1,10 @@
+# ninja log v5
+7	249	1680964906675537905	CMakeFiles/LibraryHomework.dir/Book.cpp.o	9022e0d404ff0de6
+361	401	1680999977796757501	LibraryHomework	369be6d9bb85d564
+7	361	1680999977754487990	CMakeFiles/LibraryHomework.dir/main.cpp.o	c56124f6cc7967
+0	559	1681000233098711920	build.ninja	78ab9f9fc6a53eb3
+8	288	1681000236682241944	CMakeFiles/LibraryHomework.dir/Book.cpp.o	8ee749aa5a369edc
+8	344	1681000236738291110	CMakeFiles/LibraryHomework.dir/main.cpp.o	6c99c6afa377c6a6
+344	371	1681000236767688822	LibraryHomework	369be6d9bb85d564
+8	632	1681000377587674901	CMakeFiles/LibraryHomework.dir/main.cpp.o	6c99c6afa377c6a6
+632	673	1681000377632834515	LibraryHomework	369be6d9bb85d564

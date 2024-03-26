@@ -1,0 +1,133 @@
+Script started on 2023-01-27 12:00:49-0600
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ g++ -std=c++11 -Wall main.cpp Pinball.cpp -o hw1.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@P[1@in-o hw1.exe [A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CB-o hw1.exee[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca-o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl-o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl-o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.-o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ch-o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -o hw1.exe[A]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kvoid loadPinBall(std::__cxx11::string, PinBall*)[m[K’:
+[01m[Kmain.cpp:79:25:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+       for(int i = 4 ; [01;35m[Ki < dataArr.size()[m[K;i++){
+                       [01;35m[K~~^~~~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > arrSplit(std::__cxx11::string)[m[K’:
+[01m[Kmain.cpp:96:21:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+   for (int i = 0; [01;35m[Ki <= dataString.length()[m[K; i++) {
+                   [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:97:52:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     if(dataString[i] == ',' || [01;35m[KdataString.length() == i[m[K){
+                                [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kbool writeToFile(PinBall*)[m[K’:
+[01m[Kmain.cpp:214:24:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+       for(int i = 0 ;[01;35m[Ki < themes.size() - 1[m[K;i++){
+                      [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[KPinBall.cpp:[m[K In member function ‘[01m[Kvoid PinBall::print() const[m[K’:
+[01m[KPinBall.cpp:73:20:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+   for(int i = 0 ;[01;35m[Ki < this->themes.size() - 1[m[K;i++){
+                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ ls
+[0m[01;32mhw1.exe[0m  main.cpp  PinBall.cpp  PinBall.h  pinball.txt  tran-Hw1.txt
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ h2[Kw1.exe
+hw1.exe: command not found
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ ./[K[K/h2[K1w[K[Kw1.exe
+bash: /hw1.exe: No such file or directory
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ ./hw1.exe
+Name: Medieval Madness
+Year: 1997
+Manufacturer: Williams
+Average Fun Rating: 8.3
+Themes: fantasy, medieval, wizards/magic
+
+Name: Black Knight 2000
+Year: 1989
+Manufacturer: Williams
+Average Fun Rating: 7.9
+Themes: Historical - knights
+
+Name: The Addams Family
+Year: 1992
+Manufacturer: Bally
+Average Fun Rating: 8.2
+Themes: Celebrities, fictional, licensed theme
+
+Name: Sinbad
+Year: 1978
+Manufacturer: Gottlieb
+Average Fun Rating: 7.7
+Themes: fantasy - myth and legend
+
+1: create a new Pin ball machine
+2: print all machine produced during specified year
+3: print all Pin ball machine
+4: save new machine(s) to a new text file and exit the program
+1
+[3J[H[2Jplease enter the name of this machine: tom tom
+
+please enter the year this machine was produced: 20223  3
+
+please enter the manufacturer of this machine: Joe Tech
+
+please enter the average fun rating of this machine: 4.2
+
+please enter this machine theme(s): wizard
+
+would you like to add another theme? (y) for yes and (n) for no: y
+
+please enter another theme for this machine: Dragon
+
+would you like to add another theme? (y) for yes and (n) for no: y
+
+please enter another theme for this machine: Horror
+
+would you like to add another theme? (y) for yes and (n) for no: y
+
+please enter another theme for this machine: FPS
+
+would you like to add another theme? (y) for yes and (n) for no: n
+
+Name: tom tom
+Year: 2023
+Manufacturer: Joe Tech
+Average Fun Rating: 4.2
+Themes: wizard, Dragon, Horror, FPS
+
+1: create a new Pin ball machine
+2: print all machine produced during specified year
+3: print all Pin ball machine
+4: save new machine(s) to a new text file and exit the program
+3
+[3J[H[2JName: Medieval Madness
+Year: 1997
+Manufacturer: Williams
+Average Fun Rating: 8.3
+Themes: fantasy, medieval, wizards/magic
+
+Name: Black Knight 2000
+Year: 1989
+Manufacturer: Williams
+Average Fun Rating: 7.9
+Themes: Historical - knights
+
+Name: The Addams Family
+Year: 1992
+Manufacturer: Bally
+Average Fun Rating: 8.2
+Themes: Celebrities, fictional, licensed theme
+
+Name: Sinbad
+Year: 1978
+Manufacturer: Gottlieb
+Average Fun Rating: 7.7
+Themes: fantasy - myth and legend
+
+Name: tom tom
+Year: 2023
+Manufacturer: Joe Tech
+Average Fun Rating: 4.2
+Themes: wizard, Dragon, Horror, FPS
+
+1: create a new Pin ball machine
+2: print all machine produced during specified year
+3: print all Pin ball machine
+4: save new machine(s) to a new text file and exit the program
+4
+[3J[H[2Jsaving files
+]0;phtran@turing: ~/pf2/hw1[01;32mphtran@turing[00m:[01;34m~/pf2/hw1[00m$ exit
+exit
+
+Script done on 2023-01-27 12:02:47-0600

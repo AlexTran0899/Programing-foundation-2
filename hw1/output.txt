@@ -1,0 +1,30 @@
+Name: Medieval Madness
+Year: 1997
+Manufacturer: Williams
+Average Fun Rating: 8.3
+Themes: fantasy, medieval, wizards/magic
+
+Name: Black Knight 2000
+Year: 1989
+Manufacturer: Williams
+Average Fun Rating: 7.9
+Themes: Historical - knights
+
+Name: The Addams Family
+Year: 1992
+Manufacturer: Bally
+Average Fun Rating: 8.2
+Themes: Celebrities, fictional, licensed theme
+
+Name: Sinbad
+Year: 1978
+Manufacturer: Gottlieb
+Average Fun Rating: 7.7
+Themes: fantasy - myth and legend
+
+Name: tom tom
+Year: 2023
+Manufacturer: Joe Tech
+Average Fun Rating: 4.2
+Themes: wizard, Dragon, Horror, FPS
+

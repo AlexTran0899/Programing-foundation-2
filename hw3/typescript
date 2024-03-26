@@ -1,0 +1,348 @@
+Script started on 2023-02-25 16:22:53-0600
+]0;phtran@turing: ~/pf2/hw3[01;32mphtran@turing[00m:[01;34m~/pf2/hw3[00m$ logoutcd pf2/[1Ph2f2/[1Plogout[Klogoutcd pf2/[1Ph2[1Pls -a[Kogouts[K -acd ph2f2/[1Plogout[Kscript[K[K[K[K[K[Kg++ -Wall *.cpp -o main.exe”[C[K[1P[1@m[1@a[1@i[1@n[C[C[C[C[C[1@ [1@p[1@a[1@s[1@s[1@w[1@o[1@r[1@d[1@.[1@c[1@p[1@p
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint search_password(std::vector<Password>&)[m[K’:
+[01m[Kmain.cpp:115:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+ [01;35m[K}[m[K
+ [01;35m[K^[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kvoid password_search_performance_compare(std::vector<Password>&)[m[K’:
+[01m[Kmain.cpp:159:22:[m[K [01;35m[Kwarning: [m[Kcomparison between signed and unsigned integer expressions [[01;35m[K-Wsign-compare[m[K]
+     for(int i = 0; [01;35m[Ki < data.size() - 1[m[K; i++){
+                    [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+]0;phtran@turing: ~/pf2/hw3[01;32mphtran@turing[00m:[01;34m~/pf2/hw3[00m$ s[Kls
+hashes_to_search.txt  password.h
+main.cpp              sorted_hash_indexed_list.txt
+[0m[01;32mmain.exe[0m              sorted_password_indexed_list.txt
+password.cpp          typescript
+]0;phtran@turing: ~/pf2/hw3[01;32mphtran@turing[00m:[01;34m~/pf2/hw3[00m$ ./main.exe
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1 5
+Please enter the starting password: chair 
+
+Please enter the ending password: ca hamps
+
+chair 2504 a09272
+challeng 6687 ebbb7b
+chambers 5394 c05398
+champ 3446 68a243
+champion 535 88dbda
+champs 2196 08996a
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+5
+Please enter the starting password: orion
+
+Please enter the ending password: oreos
+
+password "oreos" not found.
+cannot find the specified password range
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+5
+Please enter the starting password: point
+
+Please enter the ending password: pokemon
+
+point 7341 78ee54
+pointer 7145 ccac8a
+poipoi 4357 eed2d9
+poison 1300 35393c
+poiuy 4236 c9a140
+poiuyt 1363 8ace72
+poiuytre 7144 7213c4
+poiuytrewq 2677 380524
+pokemon 235 00bfc8
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+5
+Please enter the starting password: snapple
+
+Please enter the ending password: snikk  ck  cker
+
+snapple 3232 e28e41
+snappy 4882 1131d2
+sneakers 3231 a1743c
+snicker 8007 1b492a
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: smokie
+
+smokie 4597 2d5f5f
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: 01041993
+
+01041993 8504 44ad78
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: aurora
+
+aurora 1256 99c8ef
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: average
+
+password "average" not found.
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: doogie
+
+doogie 3441 005b9e
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+4
+Please enter the password you would like to search for: amber
+
+amber 865 595489
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: 0062d2
+
+zxcvbnm123 5252 0062d2
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: 2f2e03
+
+24061988 6565 2f2e03
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: 78a384
+
+21021988 8417 78a384
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: e2dac4
+
+hash not found.
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: 996fa1
+
+kcchiefs 8570 996fa1
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+3
+Please enter the hash you wish to search: a9c431
+
+hash not found.
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+2
+Please enter a password to search: doogie
+
+Binary search is 18 times quicker than linear search
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+2
+Please enter a password to search: amber
+
+Binary search is 9 times quicker than linear search
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: smokie
+
+7448
+smokie 4597 2d5f5f
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: 01041993
+
+84
+01041993 8504 44ad78
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: aurora
+
+2559
+aurora 1256 99c8ef
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: average
+
+unable to find password
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: doogie
+
+3820
+doogie 3441 005b9e
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+1
+Please enter the password you wish to use binary search iteratively: amber
+
+2370
+amber 865 595489
+
+Please select one of the follow: 
+5: find all password in a range.
+4: print a password rank and hash value.
+3: find hash
+2: compare binary search to linear search
+1: iterative binary search for password
+0: exit program.
+0
+Good bye
+]0;phtran@turing: ~/pf2/hw3[01;32mphtran@turing[00m:[01;34m~/pf2/hw3[00m$ exit
+exit
+
+Script done on 2023-02-25 16:26:29-0600

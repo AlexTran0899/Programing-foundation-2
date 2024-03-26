@@ -1,0 +1,400 @@
+Script started on 2023-04-23 18:24:17-0500
+]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ ./ [Khw6.s[K[K.ese
+bash: ./hw6.ese: No such file or directory
+]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ hw6.es[Kxe
+hw6.exe: command not found
+]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ ./hw6
+bash: ./hw6: No such file or directory
+]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ ./hw6.exe
+Please select one of the following: 
+5: print all student
+4: find student by full name
+3: create student
+2: delete student
+1: update student info
+0: exit the program
+5
+Collision: 0
+Count: 0
+Size: 300
+Please select one of the following: 
+5: print all student
+4: find student by full name
+3: create student
+2: delete student
+1: update student info
+0: exit the program
+0
+Collision: 0
+Count: 0
+Size: 300
+good bye...
+]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ vim main.ccp[K[Kpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;52r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[52;1H"main.cpp" 151L, 3179C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[35m#include [m[31m"Hash.h"[m
+[35m#include [m[31m<fstream>[m[6;1H[32mbool[m readfile(string fileDir, Hash & h);
+Student stringToObj(string str);
+[32mvoid[m updateStudentInfo(Hash & h);
+[32mvoid[m printMenu();
+[32mvoid[m findStudentByFullname([32mconst[m Hash & h);
+Student createStudentFromUserInput();
+
+[32mint[m main() {
+    Hash h([31m300[m);
+    readfile([31m"/Users/alexsmacbookpro/CLionProjects/HW6/student-dataset.txt"[m, h);
+    [32mchar[m input;
+    [38;5;130mdo[m {[18;9HprintMenu();[19;9Hcin >> input;[20;9H[38;5;130mswitch[m(input){[21;13H[38;5;130mcase[m [31m'5'[m:[22;17Hh.printHash();[23;17H[38;5;130mbreak[m;[24;13H[38;5;130mcase[m [31m'4'[m:[25;17HfindStudentByFullname(h);[26;17H[38;5;130mbreak[m;[27;13H[38;5;130mcase[m [31m'3'[m:[28;17Hh.hashInsert(createStudentFromUserInput());[29;17H[38;5;130mbreak[m;[30;13H[38;5;130mcase[m [31m'2'[m:[31;17Hh.hashDelete(createStudentFromUserInput());[32;17H[38;5;130mbreak[m;[33;13H[38;5;130mcase[m [31m'1'[m:[34;17HupdateStudentInfo(h);[35;17H[38;5;130mbreak[m;[36;13H[38;5;130mcase[m [31m'0'[m:[37;17Hh.printStat();[38;17Hcout << [31m"good bye..."[m << endl;[39;17H[38;5;130mbreak[m;[40;13H[38;5;130mdefault[m:[41;17Hcout << [31m"Invalid input"[m << endl;[42;9H}
+    } [38;5;130mwhile[m(input != [31m'0'[m);
+    [38;5;130mreturn[m [31m0[m;
+}
+
+[32mvoid[m printMenu() {
+    cout << [31m"Please select one of the following: "[m << endl;
+    cout << [31m"5: print all student"[m << endl;
+    cout << [31m"4: find student by full name"[m << endl;
+    cout << [31m"3: create student"[m << endl;[52;79H15,14[9CTop[15;14H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12$p[27m[23m[29m[m[H[2J[?25l[1;1H[38;5;81m#include [m[95m"Hash.h"[m
+[38;5;81m#include [m[95m<fstream>[m[6;1H[38;5;121mbool[m readfile(string fileDir, Hash & h);
+Student stringToObj(string str);
+[38;5;121mvoid[m updateStudentInfo(Hash & h);
+[38;5;121mvoid[m printMenu();
+[38;5;121mvoid[m findStudentByFullname([38;5;121mconst[m Hash & h);
+Student createStudentFromUserInput();
+
+[38;5;121mint[m main() {
+    Hash h([95m300[m);
+    readfile([95m"/Users/alexsmacbookpro/CLionProjects/HW6/student-dataset.txt"[m, h);
+    [38;5;121mchar[m input;
+    [93mdo[m {[18;9HprintMenu();[19;9Hcin >> input;[20;9H[93mswitch[m(input){[21;13H[93mcase[m [95m'5'[m:[22;17Hh.printHash();[23;17H[93mbreak[m;[24;13H[93mcase[m [95m'4'[m:[25;17HfindStudentByFullname(h);[26;17H[93mbreak[m;[27;13H[93mcase[m [95m'3'[m:[28;17Hh.hashInsert(createStudentFromUserInput());[29;17H[93mbreak[m;[30;13H[93mcase[m [95m'2'[m:[31;17Hh.hashDelete(createStudentFromUserInput());[32;17H[93mbreak[m;[33;13H[93mcase[m [95m'1'[m:[34;17HupdateStudentInfo(h);[35;17H[93mbreak[m;[36;13H[93mcase[m [95m'0'[m:[37;17Hh.printStat();[38;17Hcout << [95m"good bye..."[m << endl;[39;17H[93mbreak[m;[40;13H[93mdefault[m:[41;17Hcout << [95m"Invalid input"[m << endl;[42;9H}
+    } [93mwhile[m(input != [95m'0'[m);
+    [93mreturn[m [95m0[m;
+}
+
+[38;5;121mvoid[m printMenu() {
+    cout << [95m"Please select one of the following: "[m << endl;
+    cout << [95m"5: print all student"[m << endl;
+    cout << [95m"4: find student by full name"[m << endl;
+    cout << [95m"3: create student"[m << endl;[52;79H15,14[9CTop"main.cpp" 151L, 3179C[15;14H[?25h[?25l[52;69H~@k[15;14H[52;69H   [15;15H[52;83H5[15;15H[?25h[?25l[52;69Hi[15;15H[52;69H [15;15H[52;1H[1m-- INSERT --[m[52;13H[K[52;79H15,15[9CTop[15;15H[?25h[?25l[52;83H6[15;16H[?25h[?25l[52;83H7[15;17H[?25h[?25l[52;83H8[15;18H[?25h[?25l[52;83H9[15;19H[?25h[?25l[52;82H20[15;20H[?25h[?25l[52;83H1[15;21H[?25h[?25l[52;83H2[15;22H[?25h[?25l[52;83H3[15;23H[?25h[?25l[52;83H4[15;24H[?25h[?25l[52;83H5[15;25H[?25h[?25l[52;83H6[15;26H[?25h[?25l[52;83H7[15;27H[?25h[?25l[52;83H8[15;28H[?25h[?25l[52;83H9[15;29H[?25h[?25l[52;82H30[15;30H[?25h[?25l[52;83H1[15;31H[?25h[?25l[52;83H2[15;32H[?25h[?25l[52;83H3[15;33H[?25h[?25l[52;83H4[15;34H[?25h[?25l[52;83H5[15;35H[?25h[?25l[52;83H6[15;36H[?25h[?25l[52;83H7[15;37H[?25h[?25l[52;83H8[15;38H[?25h[?25l[52;83H9[15;39H[?25h[?25l[52;82H40[15;40H[?25h[?25l[52;83H1[15;41H[?25h[?25l[52;83H2[15;42H[?25h[?25l[52;83H3[15;43H[?25h[?25l[52;83H4[15;44H[?25h[?25l[52;83H5[15;45H[?25h[?25l[52;83H6[15;46H[?25h[?25l[52;83H7[15;47H[?25h[?25l[52;83H8[15;48H[?25h[?25l[52;83H9[15;49H[?25h[?25l[52;82H50[15;50H[?25h[?25l[52;83H1[15;51H[?25h[?25l[52;83H2[15;52H[?25h[?25l[52;83H3[15;53H[?25h[?25l[52;83H4[15;54H[?25h[?25l[52;83H5[15;55H[?25h[?25l[52;83H6[15;56H[?25h[?25l[52;83H8[15;58H[?25h[?25l[52;83H7[15;57H[?25h[?25l[52;83H6[15;56H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;80H[K[52;83H5[15;55H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;79H[K[52;83H4[15;54H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;78H[K[52;83H3[15;53H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;77H[K[52;83H2[15;52H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;76H[K[52;83H1[15;51H[?25h[?25l[95mtudent-dataset.txt"[m, h);[15;75H[K[52;83H0[15;50H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;74H[K[52;82H49[15;49H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;73H[K[52;83H8[15;48H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;70H[K[52;83H5[15;45H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;69H[K[52;83H4[15;44H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;68H[K[52;83H3[15;43H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;67H[K[52;83H2[15;42H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;66H[K[52;83H1[15;41H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;65H[K[52;83H0[15;40H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;64H[K[52;82H39[15;39H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;63H[K[52;83H8[15;38H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;62H[K[52;83H7[15;37H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;61H[K[52;83H6[15;36H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;60H[K[52;83H5[15;35H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;59H[K[52;83H4[15;34H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;58H[K[52;83H3[15;33H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;57H[K[52;83H2[15;32H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;56H[K[52;83H1[15;31H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;55H[K[52;83H0[15;30H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;54H[K[52;82H29[15;29H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;53H[K[52;83H8[15;28H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;52H[K[52;83H7[15;27H[?25h[?25l[95mtudent-dataset.txt"[m, h);[15;51H[K[52;83H6[15;26H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;50H[K[52;83H5[15;25H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;49H[K[52;83H4[15;24H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;48H[K[52;83H3[15;23H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;47H[K[52;83H2[15;22H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;46H[K[52;83H1[15;21H[?25h[?25l[95mtudent-dataset.txt"[m, h);[15;45H[K[52;83H0[15;20H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;44H[K[52;82H19[15;19H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;43H[K[52;83H8[15;18H[?25h[?25l[95mtudent-dataset.txt"[m, h);[15;42H[K[52;83H7[15;17H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;41H[K[52;83H6[15;16H[?25h[?25l[95mstudent-dataset.txt"[m, h);[15;40H[K[52;83H5[15;15H[?25h[52;1H[K[15;14H[?25l[52;69H^[[15;14H[52;69H  [15;15H[52;79H15,14[9CTop[15;14H[?25h[?25l[52;69H:[15;14H[52;69H[K[52;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"main.cpp" 151L, 3138C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw6[01;32mphtran@turing[00m:[01;34m~/pf2/hw6[00m$ gcc -Wall *.cpp -o hw6.exe
+/tmp/ccuL7s8f.o: In function `Hash::Hash()':
+Hash.cpp:(.text+0x6d): undefined reference to `operator new[](unsigned long)'
+Hash.cpp:(.text+0x108): undefined reference to `operator delete[](void*, unsigned long)'
+/tmp/ccuL7s8f.o: In function `Hash::Hash(int)':
+Hash.cpp:(.text+0x192): undefined reference to `operator new[](unsigned long)'
+Hash.cpp:(.text+0x22d): undefined reference to `operator delete[](void*, unsigned long)'
+/tmp/ccuL7s8f.o: In function `Hash::Hash(Hash const&)':
+Hash.cpp:(.text+0x2cb): undefined reference to `operator new[](unsigned long)'
+Hash.cpp:(.text+0x3d6): undefined reference to `operator delete[](void*, unsigned long)'
+/tmp/ccuL7s8f.o: In function `Hash::~Hash()':
+Hash.cpp:(.text+0x476): undefined reference to `operator delete[](void*, unsigned long)'
+/tmp/ccuL7s8f.o: In function `Hash::getHashValue(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const':
+Hash.cpp:(.text+0x4d1): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+Hash.cpp:(.text+0x4f0): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)'
+/tmp/ccuL7s8f.o: In function `Hash::hashInsert(Student)':
+Hash.cpp:(.text+0x584): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x662): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccuL7s8f.o: In function `Hash::search(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) const':
+Hash.cpp:(.text+0x6e3): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0x711): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x71f): undefined reference to `std::cout'
+Hash.cpp:(.text+0x724): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0x759): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0x79f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x7d4): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0x7fc): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x826): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x857): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x874): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccuL7s8f.o: In function `Hash::hashUpdate(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Student)':
+Hash.cpp:(.text+0x8d7): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0x937): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x955): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x97c): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0x9aa): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0x9f8): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Hash.cpp:(.text+0xa20): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0xa6f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0xa8c): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Hash.cpp:(.text+0xaa9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccuL7s8f.o: In function `Hash::hashDelete(Student)':
+Hash.cpp:(.text+0xb48): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccuL7s8f.o:Hash.cpp:(.text+0xc1e): more undefined references to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' follow
+/tmp/ccuL7s8f.o: In function `Hash::printStat() const':
+Hash.cpp:(.text+0xc80): undefined reference to `std::cout'
+Hash.cpp:(.text+0xc85): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xc99): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xca3): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xcae): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+Hash.cpp:(.text+0xcbc): undefined reference to `std::cout'
+Hash.cpp:(.text+0xcc1): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xcd5): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xcdf): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xcea): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+Hash.cpp:(.text+0xcf8): undefined reference to `std::cout'
+Hash.cpp:(.text+0xcfd): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xd10): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xd1a): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xd25): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/tmp/ccuL7s8f.o: In function `Hash::printHash() const':
+Hash.cpp:(.text+0xd42): undefined reference to `std::cout'
+Hash.cpp:(.text+0xd47): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xd5b): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xd65): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xd70): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+Hash.cpp:(.text+0xd7e): undefined reference to `std::cout'
+Hash.cpp:(.text+0xd83): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xd97): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xda1): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xdac): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+Hash.cpp:(.text+0xdba): undefined reference to `std::cout'
+Hash.cpp:(.text+0xdbf): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Hash.cpp:(.text+0xdd2): undefined reference to `std::ostream::operator<<(int)'
+Hash.cpp:(.text+0xddc): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Hash.cpp:(.text+0xde7): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/tmp/ccuL7s8f.o: In function `__static_initialization_and_destruction_0(int, int)':
+Hash.cpp:(.text+0xe48): undefined reference to `std::ios_base::Init::Init()'
+Hash.cpp:(.text+0xe5d): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/ccuL7s8f.o: In function `bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)':
+Hash.cpp:(.text._ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_[_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_]+0x1f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const'
+/tmp/ccuL7s8f.o:(.data.rel.local.DW.ref.__gxx_personality_v0[DW.ref.__gxx_personality_v0]+0x0): undefined reference to `__gxx_personality_v0'
+/tmp/ccp287fC.o: In function `main':
+main.cpp:(.text+0x3a): undefined reference to `std::allocator<char>::allocator()'
+main.cpp:(.text+0x57): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+main.cpp:(.text+0x7f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x8e): undefined reference to `std::allocator<char>::~allocator()'
+main.cpp:(.text+0xa4): undefined reference to `std::cin'
+main.cpp:(.text+0xa9): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)'
+main.cpp:(.text+0x1ad): undefined reference to `std::cout'
+main.cpp:(.text+0x1b2): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x1bc): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x1c7): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x1d7): undefined reference to `std::cout'
+main.cpp:(.text+0x1dc): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x1e6): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x1f1): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x23a): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x24e): undefined reference to `std::allocator<char>::~allocator()'
+/tmp/ccp287fC.o: In function `printMenu()':
+main.cpp:(.text+0x2b6): undefined reference to `std::cout'
+main.cpp:(.text+0x2bb): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x2c5): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x2d0): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x2de): undefined reference to `std::cout'
+main.cpp:(.text+0x2e3): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x2ed): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x2f8): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x306): undefined reference to `std::cout'
+main.cpp:(.text+0x30b): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x315): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x320): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x32e): undefined reference to `std::cout'
+main.cpp:(.text+0x333): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x33d): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x348): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x356): undefined reference to `std::cout'
+main.cpp:(.text+0x35b): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x365): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x370): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x37e): undefined reference to `std::cout'
+main.cpp:(.text+0x383): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x38d): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x398): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0x3a6): undefined reference to `std::cout'
+main.cpp:(.text+0x3ab): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0x3b5): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0x3c0): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/tmp/ccp287fC.o: In function `readfile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Hash&)':
+main.cpp:(.text+0x40a): undefined reference to `std::basic_ifstream<char, std::char_traits<char> >::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode)'
+main.cpp:(.text+0x419): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0x428): undefined reference to `std::basic_ifstream<char, std::char_traits<char> >::is_open()'
+main.cpp:(.text+0x445): undefined reference to `std::basic_ios<char, std::char_traits<char> >::good() const'
+main.cpp:(.text+0x466): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+main.cpp:(.text+0x47f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0x4cf): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x4e3): undefined reference to `std::basic_ifstream<char, std::char_traits<char> >::close()'
+main.cpp:(.text+0x4f7): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x506): undefined reference to `std::basic_ifstream<char, std::char_traits<char> >::~basic_ifstream()'
+main.cpp:(.text+0x53f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x553): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x562): undefined reference to `std::basic_ifstream<char, std::char_traits<char> >::~basic_ifstream()'
+/tmp/ccp287fC.o: In function `stringToObj(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+main.cpp:(.text+0x5c3): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0x5dc): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0x608): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+main.cpp:(.text+0x631): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)'
+main.cpp:(.text+0x650): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+main.cpp:(.text+0x68e): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0x6a4): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*)'
+main.cpp:(.text+0x6c8): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)'
+main.cpp:(.text+0x6df): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(char)'
+main.cpp:(.text+0x723): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator[](unsigned long)'
+main.cpp:(.text+0x746): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0x763): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0x77c): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0x7c0): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x7cf): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x7de): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x7ed): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0x813): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccp287fC.o:main.cpp:(.text+0x847): more undefined references to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' follow
+/tmp/ccp287fC.o: In function `createStudentFromUserInput()':
+main.cpp:(.text+0xa13): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0xa22): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0xa31): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0xa38): undefined reference to `std::cin'
+main.cpp:(.text+0xa3d): undefined reference to `std::istream::ignore()'
+main.cpp:(.text+0xa4b): undefined reference to `std::cout'
+main.cpp:(.text+0xa50): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xa61): undefined reference to `std::cin'
+main.cpp:(.text+0xa66): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+main.cpp:(.text+0xa6d): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xa77): undefined reference to `std::cout'
+main.cpp:(.text+0xa7c): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xa8a): undefined reference to `std::cout'
+main.cpp:(.text+0xa8f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xaa0): undefined reference to `std::cin'
+main.cpp:(.text+0xaa5): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+main.cpp:(.text+0xaac): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xab6): undefined reference to `std::cout'
+main.cpp:(.text+0xabb): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xac9): undefined reference to `std::cout'
+main.cpp:(.text+0xace): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xadf): undefined reference to `std::cin'
+main.cpp:(.text+0xae4): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+main.cpp:(.text+0xaeb): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xaf5): undefined reference to `std::cout'
+main.cpp:(.text+0xafa): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xb08): undefined reference to `std::cout'
+main.cpp:(.text+0xb0d): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xb1e): undefined reference to `std::cin'
+main.cpp:(.text+0xb23): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&)'
+main.cpp:(.text+0xb2a): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xb34): undefined reference to `std::cout'
+main.cpp:(.text+0xb39): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xb47): undefined reference to `std::cout'
+main.cpp:(.text+0xb4c): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xb5d): undefined reference to `std::cin'
+main.cpp:(.text+0xb62): undefined reference to `std::istream::operator>>(float&)'
+main.cpp:(.text+0xb69): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xb73): undefined reference to `std::cout'
+main.cpp:(.text+0xb78): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xb9f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0xbb5): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0xbcb): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0xc09): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xc15): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xc21): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xc31): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xc40): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccp287fC.o:main.cpp:(.text+0xc4f): more undefined references to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' follow
+/tmp/ccp287fC.o: In function `findStudentByFullname(Hash const&)':
+main.cpp:(.text+0xd18): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+main.cpp:(.text+0xd1f): undefined reference to `std::cin'
+main.cpp:(.text+0xd24): undefined reference to `std::istream::ignore()'
+main.cpp:(.text+0xd32): undefined reference to `std::cout'
+main.cpp:(.text+0xd37): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+main.cpp:(.text+0xd48): undefined reference to `std::cin'
+main.cpp:(.text+0xd4d): undefined reference to `std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&)'
+main.cpp:(.text+0xd54): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+main.cpp:(.text+0xd5e): undefined reference to `std::cout'
+main.cpp:(.text+0xd63): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+main.cpp:(.text+0xd7c): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+main.cpp:(.text+0xdba): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xdc9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xded): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+main.cpp:(.text+0xe01): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccp287fC.o: In function `__static_initialization_and_destruction_0(int, int)':
+main.cpp:(.text+0xe44): undefined reference to `std::ios_base::Init::Init()'
+main.cpp:(.text+0xe59): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/ccp287fC.o: In function `std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*)':
+main.cpp:(.text._ZNSt7__cxx114stofERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPm[_ZNSt7__cxx114stofERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPm]+0x18): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::c_str() const'
+/tmp/ccp287fC.o: In function `float __gnu_cxx::__stoa<float, float, char>(float (*)(char const*, char**), char const*, char const*, unsigned long*)':
+main.cpp:(.text._ZN9__gnu_cxx6__stoaIffcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_[_ZN9__gnu_cxx6__stoaIffcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_]+0x61): undefined reference to `std::__throw_invalid_argument(char const*)'
+main.cpp:(.text._ZN9__gnu_cxx6__stoaIffcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_[_ZN9__gnu_cxx6__stoaIffcJEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_]+0xa6): undefined reference to `std::__throw_out_of_range(char const*)'
+/tmp/ccxw8NfZ.o: In function `Student::Student()':
+Student.cpp:(.text+0x15): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x25): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x35): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x48): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*)'
+Student.cpp:(.text+0x5f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*)'
+Student.cpp:(.text+0x76): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(char const*)'
+Student.cpp:(.text+0xac): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0xbc): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0xc8): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccxw8NfZ.o: In function `Student::Student(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char, float, Student*)':
+Student.cpp:(.text+0x10e): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x11e): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x12e): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x141): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x158): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x16f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x1a9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x1b9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x1c5): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccxw8NfZ.o: In function `Student::Student(Student const&)':
+Student.cpp:(.text+0x1f5): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x205): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x215): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()'
+Student.cpp:(.text+0x228): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x243): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x25e): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x2a0): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x2b0): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x2bc): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccxw8NfZ.o: In function `Student::~Student()':
+Student.cpp:(.text+0x2ea): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x2fa): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccxw8NfZ.o:Student.cpp:(.text+0x306): more undefined references to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' follow
+/tmp/ccxw8NfZ.o: In function `Student::getFullName[abi:cxx11]() const':
+Student.cpp:(.text+0x32d): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::setFullName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+Student.cpp:(.text+0x357): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::getCountry[abi:cxx11]() const':
+Student.cpp:(.text+0x381): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::setCountry(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+Student.cpp:(.text+0x3af): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::getCity[abi:cxx11]() const':
+Student.cpp:(.text+0x3d9): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::setCity(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+Student.cpp:(.text+0x407): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/tmp/ccxw8NfZ.o: In function `Student::operator==(Student&) const':
+Student.cpp:(.text+0x60b): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x61c): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x62f): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x657): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+Student.cpp:(.text+0x66b): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/tmp/ccxw8NfZ.o:Student.cpp:(.text+0x681): more undefined references to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()' follow
+/tmp/ccxw8NfZ.o: In function `Student::print() const':
+Student.cpp:(.text+0x8c6): undefined reference to `std::cout'
+Student.cpp:(.text+0x8cb): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x8da): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Student.cpp:(.text+0x8ec): undefined reference to `std::cout'
+Student.cpp:(.text+0x8f1): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x900): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Student.cpp:(.text+0x912): undefined reference to `std::cout'
+Student.cpp:(.text+0x917): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+Student.cpp:(.text+0x926): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Student.cpp:(.text+0x93a): undefined reference to `std::cout'
+Student.cpp:(.text+0x93f): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)'
+Student.cpp:(.text+0x94e): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Student.cpp:(.text+0x964): undefined reference to `std::cout'
+Student.cpp:(.text+0x969): undefined reference to `std::ostream::operator<<(float)'
+Student.cpp:(.text+0x978): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)'
+Student.cpp:(.text+0x982): undefined reference to `std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)'
+Student.cpp:(.text+0x98d): undefined reference to `std::ostream::operator<<(std::ostream& (*)(std::ostream&))'
+/tmp/ccxw8NfZ.o: In function `__static_initialization_and_destruction_0(int, int)':
+Student.cpp:(.text+0x9b9): undefined reference to `std::ios_base::Init::Init()'
+Student.cpp:(.text+0x9ce): undefined reference to `std::ios_base::Init::~Init()'
+/tmp/ccxw8NfZ.o: In function `__gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+Student.cpp:(.text._ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_[_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_]+0x1b): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+Student.cpp:(.text._ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_[_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_]+0x2a): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+Student.cpp:(.text._ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_[_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_]+0x3b): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const'
+Student.cpp:(.text._ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_[_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_]+0x4a): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const'
+Student.cpp:(.text._ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_[_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_]+0x59): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const'
+/tmp/ccbtOW8m.o: In function `StudentList::~StudentList()':
+StudentList.cpp:(.text+0x5f): undefined reference to `operator delete(void*, unsigned long)'
+/tmp/ccbtOW8m.o: In function `StudentList::insert(Student)':
+StudentList.cpp:(.text+0x118): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+StudentList.cpp:(.text+0x136): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+StudentList.cpp:(.text+0x148): undefined reference to `operator new(unsigned long)'
+StudentList.cpp:(.text+0x1a5): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+StudentList.cpp:(.text+0x1cd): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+StudentL

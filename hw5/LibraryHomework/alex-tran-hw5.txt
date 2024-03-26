@@ -1,0 +1,961 @@
+Script started on 2023-04-08 20:07:28-0500
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ exit[2Plsg++ -std=c++11 main.cpp Book.cpp -o hw5..exe[A]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ ls[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cg++ -std=c++11 main.cpp Book.cpp -o hw5..exe
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> & library);
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:7:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:7:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> & library);
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:7:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K & library);
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:7:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> & [01;31m[Klibrary[m[K);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type);
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:8:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:8:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type);
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:8:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type);
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:8:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type);
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:8:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K);
+                                              [01;31m[K^~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:9:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:9:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:9:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:9:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> & library);
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:10:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> & library);
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:10:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K & library);
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:10:36:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> & [01;31m[Klibrary[m[K);
+                                    [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:11:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library);
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:12:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:12:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> & library, int low, int high);
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:12:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K & library, int low, int high);
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:12:32:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> & [01;31m[Klibrary[m[K, int low, int high);
+                                [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:12:41:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, [01;31m[Kint[m[K low, int high);
+                                         [01;31m[K^~~[m[K
+[01m[Kmain.cpp:12:50:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> & library, int low, [01;31m[Kint[m[K high);
+                                                  [01;31m[K^~~[m[K
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[Kmain.cpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     [01;31m[Kvector[m[K<Book> library;
+     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:16:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+     [01;36m[Kvector[m[K<Book> library;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kperror[m[K
+[01m[Kmain.cpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector<Book[01;31m[K>[m[K library;
+                [01;31m[K^[m[K
+[01m[Kmain.cpp:16:18:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+     vector<Book> [01;31m[Klibrary[m[K;
+                  [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KreadFile[m[K’ was not declared in this scope
+     [01;31m[KreadFile[m[K(library);
+     [01;31m[K^~~~~~~~[m[K
+[01m[Kmain.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinsertion_sort[m[K’ was not declared in this scope
+     [01;31m[Kinsertion_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:24:5:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteFile[m[K’ was not declared in this scope
+     [01;31m[KwriteFile[m[K(library, "insertion_sort");
+     [01;31m[K^~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kselection_sort[m[K’ was not declared in this scope
+     [01;31m[Kselection_sort[m[K(library);
+     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[Kmain.cpp:27:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksuseconds_t[m[K’
+     [01;36m[Kselection_sort[m[K(library);
+     [01;36m[K^~~~~~~~~~~~~~[m[K
+     [32m[Ksuseconds_t[m[K
+[01m[Kmain.cpp:34:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kmerge_sort[m[K’ was not declared in this scope
+     library = [01;31m[Kmerge_sort[m[K(library);
+               [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kquick_sort[m[K’ was not declared in this scope
+     [01;31m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[Kmain.cpp:41:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kquick_exit[m[K’
+     [01;36m[Kquick_sort[m[K(library, 0, library.size() - 1);
+     [01;36m[K^~~~~~~~~~[m[K
+     [32m[Kquick_exit[m[K
+[01m[Kmain.cpp:[m[K At global scope:
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kinsertion_sort[m[K’ declared void
+ void insertion_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:57:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:57:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void insertion_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:57:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void insertion_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:57:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void insertion_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kselection_sort[m[K’ declared void
+ void selection_sort([01;31m[Kvector[m[K<Book> &library){
+                     [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:68:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:68:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void selection_sort([01;36m[Kvector[m[K<Book> &library){
+                     [01;36m[K^~~~~~[m[K
+                     [32m[Kperror[m[K
+[01m[Kmain.cpp:68:32:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void selection_sort(vector<Book[01;31m[K>[m[K &library){
+                                [01;31m[K^[m[K
+[01m[Kmain.cpp:68:35:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void selection_sort(vector<Book> &[01;31m[Klibrary[m[K){
+                                   [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:80:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge(vector<Book> & a, vector<Book> & b) {
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:101:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ does not name a type; did you mean ‘[01m[Kperror[m[K’?
+ [01;31m[Kvector[m[K<Book> merge_sort(vector<Book> & library){
+ [01;31m[K^~~~~~[m[K
+ [32m[Kperror[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+ int partition([01;31m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:111:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ int partition([01;36m[Kvector[m[K<Book> & arr, int low , int high) {
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:111:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ int partition(vector<Book[01;31m[K>[m[K & arr, int low , int high) {
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:111:30:[m[K [01;31m[Kerror: [m[K‘[01m[Karr[m[K’ was not declared in this scope
+ int partition(vector<Book> & [01;31m[Karr[m[K, int low , int high) {
+                              [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:35:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, [01;31m[Kint[m[K low , int high) {
+                                   [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ int partition(vector<Book> & arr, int low , [01;31m[Kint[m[K high) {
+                                             [01;31m[K^~~[m[K
+[01m[Kmain.cpp:111:53:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ int partition(vector<Book> & arr, int low , int high[01;31m[K)[m[K {
+                                                     [01;31m[K^[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kquick_sort[m[K’ declared void
+ void quick_sort([01;31m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:125:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:125:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void quick_sort([01;36m[Kvector[m[K<Book> &library, int low, int high){
+                 [01;36m[K^~~~~~[m[K
+                 [32m[Kperror[m[K
+[01m[Kmain.cpp:125:28:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void quick_sort(vector<Book[01;31m[K>[m[K &library, int low, int high){
+                            [01;31m[K^[m[K
+[01m[Kmain.cpp:125:31:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void quick_sort(vector<Book> &[01;31m[Klibrary[m[K, int low, int high){
+                               [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:125:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, [01;31m[Kint[m[K low, int high){
+                                        [01;31m[K^~~[m[K
+[01m[Kmain.cpp:125:49:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+ void quick_sort(vector<Book> &library, int low, [01;31m[Kint[m[K high){
+                                                 [01;31m[K^~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KreadFile[m[K’ declared void
+ void readFile([01;31m[Kvector[m[K<Book> &library){
+               [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:133:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:133:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void readFile([01;36m[Kvector[m[K<Book> &library){
+               [01;36m[K^~~~~~[m[K
+               [32m[Kperror[m[K
+[01m[Kmain.cpp:133:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void readFile(vector<Book[01;31m[K>[m[K &library){
+                          [01;31m[K^[m[K
+[01m[Kmain.cpp:133:29:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void readFile(vector<Book> &[01;31m[Klibrary[m[K){
+                             [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[KwriteFile[m[K’ declared void
+ void writeFile([01;31m[Kvector[m[K<Book> &library, string type) {
+                [01;31m[K^~~~~~[m[K
+[01m[Kmain.cpp:164:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+[01m[Kmain.cpp:164:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kperror[m[K’
+ void writeFile([01;36m[Kvector[m[K<Book> &library, string type) {
+                [01;36m[K^~~~~~[m[K
+                [32m[Kperror[m[K
+[01m[Kmain.cpp:164:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+ void writeFile(vector<Book[01;31m[K>[m[K &library, string type) {
+                           [01;31m[K^[m[K
+[01m[Kmain.cpp:164:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klibrary[m[K’ was not declared in this scope
+ void writeFile(vector<Book> &[01;31m[Klibrary[m[K, string type) {
+                              [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:164:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Ktype[m[K’
+ void writeFile(vector<Book> &library, string [01;31m[Ktype[m[K) {
+                                              [01;31m[K^~~~[m[K
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim main.cpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"main.cpp" 175L, 4962C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[34m// sort by rating[m
+[32mvoid[m quick_sort(vector<Book> &library, [32mint[m low, [32mint[m high){
+    [38;5;130mif[m(low < high) {[5;9H[32mint[m pi = partition(library, low, high);[6;9Hquick_sort(library, low, pi - [31m1[m);[7;9Hquick_sort(library, pi + [31m1[m, high);
+    }
+}
+
+[32mvoid[m readFile(vector<Book> &library){
+    ifstream din ([31m"books.csv"[m);
+    string data;
+    [38;5;130mif[m (din.is_open())
+    {[16;9H[38;5;130mwhile[m (getline(din,data) )[17;9H{[18;13HBook curr = stringToBookParser(data);[19;13Hlibrary.push_back(curr);[20;9H}[21;9Hdin.close();
+    } [38;5;130melse[m {[23;9Hcout << [31m"failed"[m;[24;63H134,19[8C80%[12;19H[?25h[?25l[24;53H~@k[12;19H[24;53H   [11;19H[24;65H3[11;19H[?25h[?25l[24;53H~@k[11;19H[24;53H   [10;1H[24;65H2,0-1[10;1H[?25h[?25l[3;58H[106m{[9;1H}[m[24;65H1,1  [9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [8;5H[3;58H{[4;20H[106m{[8;5H}[m
+}[24;65H0,5[8;5H[?25h[?25l[24;53H~@k[8;5H[24;53H   [7;19H[4;20H{[7;19H[106m([21C)[m
+    }[24;64H29,19[7;19H[?25h[?25l[24;53H~@k[7;19H[24;53H   [6;19H[106m([20C)[m[7;19H([21C)[24;65H8[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H}[7;19H([20C)[24;1H[K[24;63H127,19[8C79%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mreturn[m pointer + [31m1[m;[24;63H[K[24;63H126,19[8C78%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hswap(arr[pointer + [31m1[m], arr[high]);[24;63H[K[24;63H125,19[8C78%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;17H[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H124,17[8C77%[6;17H[?25h[?25l[24;53H~@k[6;17H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;9H}[24;63H[K[24;63H123,0-1[7C76%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;13Hswap(arr[pointer], arr[i]);[24;63H[K[24;63H122,1[9C76%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;13Hpointer += [31m1[m;[24;63H[K[24;63H121,19[8C75%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H[38;5;130mif[m(arr[i].getRating() <= pivot) {[24;63H[K[24;63H120,19[8C75%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;5H[6;23r[6;1H[L[1;24r[1;5H[38;5;130mfor[m([32mint[m i = low; i < high; i++) [106m{[m[1;38H[K[2;9H[38;5;130mif[m(arr[i].getRating() <= pivot) {[3;13Hpointer += [31m1[m;[3;26H[K[4;9H    swap(arr[pointer], arr[i]);
+        }
+    [106m}[m[24;63H[K[24;63H119,5[9C74%[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;9H[1;23r[1;1H[L[1;24r[1;5H[32mint[m pointer = low - [31m1[m;[2;37H{[3;41H[106m{[6;9H}[m
+    }[24;63H[K[24;63H118,9[9C73%[6;9H[?25h[?25l[24;53H~@k[6;9H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[32mfloat[m pivot = arr[high].getRating();[4;41H{[7;9H}[24;63H[K[24;63H117,19[8C73%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[32mint[m partition(vector<Book> & arr, [32mint[m low , [32mint[m high) {[24;63H[K[24;63H116,19[8C72%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H115,19[8C71%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H}[24;63H[K[24;63H114,19[8C71%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mreturn[m merge(left, right);[24;63H[K[24;63H113,19[8C70%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> right(library.begin() + mid, library.end());[24;63H[K[24;63H112,19[8C69%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> left(library.begin(), library.begin() + mid);[24;63H[K[24;63H111,19[8C69%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[32mint[m mid = library.size() / [31m2[m;[24;63H[K[24;63H110,0-1[7C68%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H109,1[9C67%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H[38;5;130mreturn[m library;[24;63H[K[24;63H108,19[8C67%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mif[m (library.size() == [31m1[m){[24;63H[K[24;63H107,19[8C66%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1Hvector<Book> merge_sort(vector<Book> & library){[24;63H[K[24;63H106,19[8C65%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[34m// sort by year[m[24;63H[K[24;63H105,19[8C65%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;5H[1;23r[1;1H[L[1;24r[4;29H[106m{[6;5H}[m[24;63H[K[24;63H104,5[9C64%[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H}[5;29H{[7;5H}[24;63H[K[24;63H103,19[8C63%[6;19H[?25h[?25l[1;23r[1;1H[L[1;24r[1;5H[38;5;130mreturn[m c;[24;63H[K[24;63H102,19[8C63%[6;19H[?25h[?25l[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H101,19[8C62%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;15H[1;23r[1;1H[L[1;24r[1;9Hc.push_back(b[bIdx++]);[24;63H[K[24;63H100,15[8C61%[6;15H[?25h[?25l[24;53H~@k[6;15H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mwhile[m(bIdx < b.size()){[24;63H[K[24;63H99,0-1[8C61%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H98,1[10C60%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;13H[1;23r[1;1H[L[1;24r[1;9Hc.push_back(a[aIdx++]);[24;63H[K[24;63H97,13[9C59%[6;13H[?25h[?25l[24;53H~@k[6;13H[24;53H   [6;5H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mwhile[m(aIdx < a.size()){[4;27H[106m{[6;5H}[m[24;63H[K[24;63H96,5[10C59%[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H}[5;27H{[7;5H}[24;63H[K[24;63H95,19[9C58%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H}[24;63H[K[24;63H94,19[9C57%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;5H[1;23r[1;1H[L[1;24r[1;13Hc.push_back(a[aIdx++]);[4;27H[106m{[6;5H}[m[24;63H[K[24;63H93,5[10C57%[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H} [38;5;130melse[m {[5;27H{[7;5H}[24;63H[K[24;63H92,19[9C56%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;13Hc.push_back(b[bIdx++]);[24;63H[K[24;63H91,19[9C55%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;5H[1;23r[1;1H[L[1;24r[1;9H[38;5;130mif[m(a[aIdx].getYear() > b[bIdx].getYear()) {[24;63H[K[24;63H90,5[10C55%[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;9H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mwhile[m(aIdx < a.size() && bIdx < b.size()){[4;16H[106m{[6;9H}[m[24;63H[K[24;63H89,9[10C54%[6;9H[?25h[?25l[24;53H~@k[6;9H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[32mint[m bIdx = [31m0[m;[5;16H{[7;9H}[24;63H[K[24;63H88,19[9C53%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;16H[1;23r[1;1H[L[1;24r[1;5H[32mint[m aIdx = [31m0[m;[6;16H[106m{[8;9H}[m[24;63H[K[24;63H87,16[9C53%[6;16H[?25h[?25l[24;53H~@k[6;16H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> c;[7;16H{[9;9H}[24;63H[K[24;63H86,19[9C52%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1Hvector<Book> merge(vector<Book> & a, vector<Book> & b) {[24;63H[K[24;63H85,19[9C51%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H84,19[9C51%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;17H[1;23r[1;1H[L[1;24r[1;1H}[24;63H[K[24;63H83,17[9C50%[6;17H[?25h[?25l[24;53H~@k[6;17H[24;53H   [6;17H[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H82,17[9C50%[6;17H[?25h[?25l[24;53H~@k[6;17H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9Hswap(library[minIDX],library[i]);[24;63H[K[24;63H81,19[9C49%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H}[6;19H[106m([34C)[m[24;63H[K[24;63H80,19[9C48%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;13H}[7;19H([34C)[24;63H[K[24;63H79,0-1[8C48%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;17HminIDX = j;[24;63H[K[24;63H78,1[10C47%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;5H[1;23r[1;1H[2L[1;24r[1;13H[38;5;130mif[m(library[j].getAuthorFirstName() < library[minIDX].getAuthorFirstNN[2;1Hame()){[24;63H[K[24;63H77,5[10C46%[7;5H[?25h[?25l[24;53H~@k[7;5H[24;53H   [6;19H[24;64H6,19[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;9H[6;23r[6;1H[L[1;24r[1;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++)[106m{[m[1;50H[K[2;1H            [38;5;130mif[m(library[j].getAuthorFirstName() < library[minIDX].getAuthorFirstNN[3;1Hame()){[3;17H[K[4;13H    minIDX = j;[5;9H    }[6;9H[106m}[m[24;63H[K[24;63H75,9[10C45%[6;9H[?25h[?25l[24;53H~@k[6;9H[24;53H   [6;13H[1;23r[1;1H[L[1;24r[1;9H[32mint[m minIDX = i;[2;48H{[4;7H[106m{[6;13H}[m[7;9H}[24;63H[K[24;63H74,13[9C45%[6;13H[?25h[?25l[24;53H~@k[6;13H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[5;7H{[7;13H}[24;63H[K[24;63H73,19[9C44%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[1;1H[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){[24;63H[K[24;63H72,19[9C43%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H71,19[9C42%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H}[24;63H[K[24;63H70,19[9C41%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H}[24;63H[K[24;63H69,19[9C41%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;9H}[24;63H[K[24;63H68,19[9C40%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;13HcurrIDX -= [31m1[m;[24;63H[K[24;63H67,19[9C39%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[24;63H[K[24;63H66,0-1[8C39%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAutt[2;1HhorLastName()){[24;63H[K[24;63H65,1[10C38%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;5H[24;64H4,5[6;5H[?25h[?25l[24;53H~@k[6;5H[24;53H   [6;9H[1;23r[1;1H[L[1;24r[1;9H[32mint[m currIDX = i;[3;15H[106m{[6;9H}[m[24;63H[K[24;63H63,9[10C37%[6;9H[?25h[?25l[1;23r[1;1H[L[1;24r[1;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[4;15H{[7;9H}[24;63H[K[24;63H62,19[9C37%[6;19H[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m insertion_sort(vector<Book> &library){[24;63H[K[24;63H61,19[9C36%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[2;1H[34m// sort by authorLastName[m[24;63H[K[24;63H60,19[9C35%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H}[24;63H[K[24;63H59,19[9C34%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hsecond = temp;[24;63H[K[24;63H58,19[9C33%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hfirst = second;[24;63H[K[24;63H57,19[9C33%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5HBook temp = first;[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H56,19[9C32%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m swap(Book & first, Book & second) {[24;63H[K[24;63H55,0-1[8C32%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[2;40H[106m{[6;1H}[m[24;63H[K[24;63H54,1[10C31%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;18H[1;23r[1;1H[L[1;24r[1;1H}[3;40H{[7;1H}[24;63H[K[24;63H53,18[9C30%[6;18H[?25h[?25l[24;53H~@k[6;18H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mreturn[m [31m0[m;[24;63H[K[24;63H52,19[9C30%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H51,19[9C29%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"quick_sort"[m);[24;63H[K[24;63H50,19[9C28%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[2;1Hdl;[24;63H[K[24;63H49,0-1[8C27%[7;1H[?25h[?25l[24;64H8,1  [6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;13H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H47,13[9C27%[6;13H[?25h[?25l[24;53H~@k[6;13H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[24;63H[K[24;63H46,0-1[8C26%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hquick_sort(library, [31m0[m, library.size() - [31m1[m);[24;63H[K[24;63H45,19[9C25%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H44,19[9C24%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"merge_sort"[m);[24;63H[K[24;63H43,19[9C24%[6;19H[?25h[?25l[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for merge_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[2;1Hdl;[24;63H[K[24;63H42,18[9C23%[7;18H[?25h[?25l[24;53H~@k[7;18H[24;53H   [6;19H[24;64H1,19[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[6;18H[106m()[m[24;63H[K[24;63H40,19[9C22%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[7;18H()[24;63H[K[24;63H39,0-1[8C22%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hlibrary = merge_sort(library);[24;63H[K[24;63H38,19[9C21%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[24;63H[K[24;63H37,19[9C20%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H36,19[9C19%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [7;18H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[2;1H< endl;[24;63H[K[24;63H35,18[9C18%[7;18H[?25h[?25l[24;53H~@k[7;18H[24;53H   [6;19H[24;64H4,19[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[6;18H[106m()[m[24;63H[K[24;63H33,19[9C18%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[7;18H()[24;63H[K[24;63H32,0-1[8C17%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hselection_sort(library);[24;63H[K[24;63H31,19[9C16%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[24;63H[K[24;63H30,19[9C15%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"insertion_sort"[m);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H29,19[9C14%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [7;18H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[2;1H< endl;[24;63H[K[24;63H28,18[9C14%[7;18H[?25h[?25l[24;53H~@k[7;18H[24;53H   [6;19H[106m([7C)[m[24;64H7,19[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5H[32mdouble[m runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[6;18H[106m()[m[7;19H([7C)[24;63H[K[24;63H26,19[9C13%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[32mclock_t[m end = clock();[7;18H()[24;63H[K[24;63H25,0-1[8C12%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hinsertion_sort(library);[24;63H[K[24;63H24,19[9C12%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[2L[1;24r[2;5H[32mclock_t[m start = clock();[24;63H[K[24;63H23,19[9C10%[6;19H[?25h[?25l[1;23r[1;1H[L[1;24r[1;5HreadFile(library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H22,19[9C10%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> library;[24;63H[K[24;63H21,19[10C9%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[32mint[m main(){[6;19H[106m([7C)[m[24;63H[K[24;63H20,19[10C9%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[7;19H([7C)[24;63H[K[24;63H19,19[10C8%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1HBook stringToBookParser([32mconst[m string & str);[24;63H[K[24;63H18,0-1[9C7%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);[24;63H[K[24;63H17,19[10C7%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1Hvector<Book> merge_sort(vector<Book> & library);[24;63H[K[24;63H16,19[10C6%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;11H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m selection_sort(vector<Book> & library);[24;63H[K[24;63H15,11[10C5%[6;11H[?25h[?25l[24;53H~@k[6;11H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m insertion_sort(vector<Book> & library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H14,0-1[9C5%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m writeFile(vector<Book> &library, string type);[24;63H[K[24;63H13,19[10C4%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m readFile(vector<Book> & library);[24;63H[K[24;63H12,19[10C3%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[34m// function prototype[m[24;63H[K[24;63H11,19[10C3%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H10,19[10C2%[6;19H[?25h[?25l[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m<fstream>[m[24;63H[K[24;63H9,19[11C1%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m"Book.h"[m[24;63H[K[24;63H8,19[11C1%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[34m// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m[24;63H[K[24;63H7,19[11C0%[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [6;19H[1;23r[1;1H[L[1;24r[1;1H[34m// Created by Alex Tran[m[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H6,19[10CTop[6;19H[?25h[?25l[24;53H~@k[6;19H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [4;18H[24;63H4,18 [4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [2;19H[24;63H2,19[2;19H[?25h[?25l[24;53H~@k[2;19H[24;53H   [1;19H[24;63H1[1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [2;19H[24;63H2[2;19H[?25h[?25l[24;53H~@k[2;19H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [4;18H[24;63H4,18[4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [4;18H[24;63H4,18 [4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [2;19H[24;63H2,19[2;19H[?25h[?25l[24;53H~@k[2;19H[24;53H   [1;19H[24;63H1[1;19H[?25h[?25l[24;53H~@k[1;19H[24;53H   [2;19H[24;63H2[2;19H[?25h[?25l[24;53H~@k[2;19H[24;53H   [2;20H[24;65H20[2;20H[?25h[?25l[24;53H~@k[2;20H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [4;18H[24;63H4,18[4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [2;20H[24;63H2,20[2;20H[?25h[?25l[24;53H~@k[2;20H[24;53H   [2;21H[24;66H1[2;21H[?25h[?25l[24;53H~@k[2;21H[24;53H   [2;22H[24;66H2[2;22H[?25h[?25l[24;53H~@k[2;22H[24;53H   [2;23H[24;66H3[2;23H[?25h[?25l[24;53H~@k[2;23H[24;53H   [2;24H[24;66H4[2;24H[?25h[?25l[24;53H~@k[2;24H[24;53H   [2;25H[24;66H5[2;25H[?25h[?25l[24;53H~@k[2;25H[24;53H   [2;26H[24;66H6[2;26H[?25h[?25l[24;53H~@k[2;26H[24;53H   [2;27H[24;66H7[2;27H[?25h[?25l[24;53H~@k[2;27H[24;53H   [2;27H[?25h[?25l[24;53Hi[2;27H[24;53H [2;27H[24;1H[1m-- INSERT --[m[24;63H[K[24;63H2,27[10CTop[2;27H[?25h[?25l[3;23r[3;1H[L[1;24r[2;27H[K[3;1H[34m// [m[31m3[m[24;63H[K[24;63H3,4[11CTop[3;4H[?25h[?25l[24;65H3[3;3H[?25h[?25l[24;65H4[3;4H[?25h[?25l[31m3[m[3;4H[K[24;65H3[3;3H[?25h[?25l/[31m3[m[3;3H[K[24;65H2[3;2H[?25h[?25l[31m3[m[3;2H[K[24;65H1[3;1H[?25h[?25l[2;23r[23;1H
+[1;24r[2;1H[34m// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m[23;5Hcout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H2,27[10CTop[2;27H[?25h[?25l[24;66H8[2;28H[?25h[?25l[3;23r[3;1H[L[1;24r[3;1H[34m// [m[24;63H[K[24;63H3,4[11CTop[3;4H[?25h[?25l[3;3H[K[24;65H3[3;3H[?25h[?25l/[3;2H[K[24;65H2[3;2H[?25h[?25l[3;1H[K[24;65H1[3;1H[?25h[?25l#[24;65H2[3;2H[?25h[?25li[24;65H3[3;3H[?25h[?25ln[24;65H4[3;4H[?25h[?25lc[24;65H5[3;5H[?25h[?25ll[24;65H6[3;6H[?25h[?25lu[24;65H7[3;7H[?25h[?25ld[24;65H8[3;8H[?25h[?25le[24;65H9[3;9H[?25h[?25l[24;65H10[3;10H[?25h[?25l[35m#include <[m[24;66H1[3;11H[?25h[?25lv[24;66H2[3;12H[?25h[?25le[24;66H3[3;13H[?25h[?25lc[24;66H4[3;14H[?25h[?25lo[24;66H5[3;15H[?25h[?25lt[24;66H6[3;16H[?25h[?25lr[24;66H7[3;17H[?25h[?25l[3;16H[K[24;66H6[3;16H[?25h[?25l[3;15H[K[24;66H5[3;15H[?25h[?25l[3;14H[K[24;66H4[3;14H[?25h[?25l[3;13H[K[24;66H3[3;13H[?25h[?25lc[24;66H4[3;14H[?25h[?25lt[24;66H5[3;15H[?25h[?25lo[24;66H6[3;16H[?25h[?25lr[24;66H7[3;17H[?25h[?25l[3;10H[31m<vector>[m[24;66H8[3;18H[?25h[?25l[3;10H[35m<[mvector[3;17H[K[24;66H7[3;17H[?25h[?25l[3;15H[K[24;66H5[3;15H[?25h[?25l[3;14H[K[24;66H4[3;14H[?25h[?25l[3;13H[K[24;66H3[3;13H[?25h[?25l[3;12H[K[24;66H2[3;12H[?25h[?25l[3;11H[K[24;66H1[3;11H[?25h[?25l#include [3;10H[K[24;66H0[3;10H[?25h[?25l[24;65H9 [3;9H[?25h[?25l[3;8H[K[24;65H8[3;8H[?25h[?25l[3;7H[K[24;65H7[3;7H[?25h[?25l[3;6H[K[24;65H6[3;6H[?25h[?25l[3;5H[K[24;65H5[3;5H[?25h[?25l[3;4H[K[24;65H4[3;4H[?25h[?25l[3;3H[K[24;65H3[3;3H[?25h[?25l[3;2H[K[24;65H2[3;2H[?25h[?25l[3;1H[K[24;65H1[3;1H[?25h[24;1H[K[3;1H[?25l[24;53H^[[3;1H[24;53H  [3;1H[24;63H3,0-1[9CTop[3;1H[?25h[?25l[24;53H:[3;1H[24;53H[K[24;1H:[?2004h[?25hq[?25l[?25h![?25l[?25h[?25l[?2004l[24;1H[K[24;1H[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim Book.h
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"Book.h" 46L, 1031C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m//
+// Created by Alex Tran on [m[31m4[m[34m/[m[31m5[m[34m/[m[31m23.[m
+[34m//[m
+
+[35m#ifndef SORTING2_BOOK_H
+#define SORTING2_BOOK_H
+#include [m[31m<iostream>[m
+
+[38;5;130musing[m [32mnamespace[m std;
+[32mclass[m Book {
+[38;5;130mpublic[m:
+    Book();
+    Book([32mint[m year, [32mconst[m string &title, [32mconst[m string &authorFirstName, [32mconst[m strr[14;1Hing &authorLastName,[15;10H[32mconst[m string &genre, [32mfloat[m rating);
+    Book([32mconst[m Book & book);
+    ~Book();[19;5H[34m// getter[m
+    [32mint[m getYear() [32mconst[m;
+    string getTitle() [32mconst[m;
+    string getAuthorFirstName() [32mconst[m;
+    string getAuthorLastName() [32mconst[m;[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [2;1H[24;63H2[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [3;1H[24;63H3[3;1H[?25h[?25l[24;53H~@k[3;1H[24;53H   [4;1H[24;63H4,0-1[4;1H[?25h[?25l[24;53H~@k[4;1H[24;53H   [5;1H[24;63H5,1  [5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [6;1H[24;63H6[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[24;63H7[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [8;1H[24;63H8,0-1[8;1H[?25h[?25l[24;53Hi[8;1H[24;53H [8;1H[24;1H[1m-- INSERT --[m[24;13H[K[24;63H8,1[11CTop[8;1H[?25h[?25l#[24;65H2[8;2H[?25h[?25li[24;65H3[8;3H[?25h[?25ln[24;65H4[8;4H[?25h[?25lc[24;65H5[8;5H[?25h[?25ll[24;65H6[8;6H[?25h[?25lu[24;65H7[8;7H[?25h[?25ld[24;65H8[8;8H[?25h[?25le[24;65H9[8;9H[?25h[?25l[24;65H10[8;10H[?25h[?25l[35m#include <[m[24;66H1[8;11H[?25h[?25l#include [8;10H[K[24;66H0[8;10H[?25h[?25l[35m#include <[m[24;66H1[8;11H[?25h[?25lv[24;66H2[8;12H[?25h[?25le[24;66H3[8;13H[?25h[?25lc[24;66H4[8;14H[?25h[?25lt[24;66H5[8;15H[?25h[?25lo[24;66H6[8;16H[?25h[?25lr[24;66H7[8;17H[?25h[?25l[8;10H[31m<vector>[m[24;66H8[8;18H[?25h[?25l[9;23r[9;1H[L[1;24r[24;63H[K[24;63H9,1[11CTop[9;1H[?25h[?25l#[24;65H2[9;2H[?25h[?25li[24;65H3[9;3H[?25h[?25ln[24;65H4[9;4H[?25h[?25lc[24;65H5[9;5H[?25h[?25ll[24;65H6[9;6H[?25h[?25lu[24;65H7[9;7H[?25h[?25ld[24;65H8[9;8H[?25h[?25le[24;65H9[9;9H[?25h[?25l[24;65H10[9;10H[?25h[?25l[35m#include <[m[24;66H1[9;11H[?25h[?25ls[24;66H2[9;12H[?25h[?25lt[24;66H3[9;13H[?25h[?25lr[24;66H4[9;14H[?25h[?25li[24;66H5[9;15H[?25h[?25ln[24;66H6[9;16H[?25h[?25lg[24;66H7[9;17H[?25h[?25l[9;10H[31m<string>[m[24;66H8[9;18H[?25h[?25l[10;23r[10;1H[L[1;24r[24;63H[K[24;63H10,1[10CTop[10;1H[?25h[24;1H[K[10;1H[?25l[24;53H^[[10;1H[24;53H  [10;1H[24;63H10,0-1[8CTop[10;1H[?25h[?25l[24;53H:[10;1H[24;53H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"Book.h" 48L, 1067C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim Book.hmain.cppg++ -std=c++11 main.cpp Book.cpp -o hw5..exe
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ ls
+AlexT-HW5.txt      Book.h             [0m[01;32mhw5.exe[0m             quick_sort.csv
+alex-tran-hw5.txt  books.csv          insertion_sort.csv  selection_sort.csv
+AlexTran-hw5.txt   [01;34mcmake-build-debug[0m  main.cpp
+Book.cpp           CMakeLists.txt     merge_sort.csv
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ hw5.exe
+hw5.exe: command not found
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ ./hw5.exe
+Segmentation fault (core dumped)
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ ./he[Kw5.exe
+Segmentation fault (core dumped)
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim mainc[K.cpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"main.cpp" 175L, 4962C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m// Created by Alex Tran
+// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m
+[35m#include [m[31m"Book.h"[m
+[35m#include [m[31m<fstream>[m
+
+[34m// function prototype[m
+[32mvoid[m readFile(vector<Book> & library);
+[32mvoid[m writeFile(vector<Book> &library, string type);
+[32mvoid[m insertion_sort(vector<Book> & library);
+[32mvoid[m selection_sort(vector<Book> & library);
+vector<Book> merge_sort(vector<Book> & library);
+[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);
+Book stringToBookParser([32mconst[m string & str);
+
+[32mint[m main(){
+    vector<Book> library;
+    readFile(library);[19;5H[32mclock_t[m start = clock();
+    insertion_sort(library);
+    [32mclock_t[m end = clock();
+    [32mdouble[m runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);
+    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <[23;1H[94m@@@                                                                             [m[24;63H3,1[11CTop[3;1H[?25h[?25l[24;53H~@k[3;1H[24;53H   [4;1H[24;63H4[4;1H[?25h[?25l[24;53H~@k[4;1H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [6;1H[24;63H6,1  [6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[24;63H7[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [8;1H[24;63H8[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [9;1H[24;63H9[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [10;1H[24;63H10,1[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [11;1H[24;64H1[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [12;1H[24;64H2[12;1H[?25h[?25l[24;53H~@k[12;1H[24;53H   [13;1H[24;64H3[13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [14;1H[24;64H4,0-1[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [15;1H[24;64H5,1  [15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [16;1H[24;64H6[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [17;1H[24;64H7[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H8,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[22;1H    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;1H[K[24;63H19,1[11C0%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"insertion_sort"[m);[24;63H[K[24;63H20,1[11C1%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H21,1[11C1%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H22,1[11C2%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hselection_sort(library);
+    end = clock();[24;63H[K[24;63H23,1[11C3%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H24,1[11C4%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;63H[K[24;63H25,0-1[9C5%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H6,1  [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H27,1[11C6%[18;1H[?25h[?25l[1;23r[23;1H
+[1;24r[24;63H[K[24;63H28,1[11C7%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H29,1[11C7%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hlibrary = merge_sort(library);
+    end = clock();[24;63H[K[24;63H30,1[11C9%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H31,1[11C9%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for merge_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[23;1Hdl;[24;63H[K[24;63H32,0-1[8C10%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H3,1  [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"merge_sort"[m);[24;63H[K[24;63H34,1[10C11%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H35,1[10C12%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H36,1[10C12%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hquick_sort(library, [31m0[m, library.size() - [31m1[m);
+    end = clock();[24;63H[K[24;63H37,1[10C14%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);
+    cout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << en[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H38,1[10C14%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H9,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[22;1H    cout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[23;1Hdl;[24;63H[K[24;63H40,1[10C15%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"quick_sort"[m);[24;63H[K[24;63H41,1[10C16%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H42,1[10C16%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5H[38;5;130mreturn[m [31m0[m;[24;63H[K[24;63H43,1[10C17%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;1H}[24;63H[K[24;63H44,1[10C18%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;[24;63H[K[24;63H45,1[10C19%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H6,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hfirst = second;[24;63H[K[24;63H47,1[10C20%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hsecond = temp;[24;63H[K[24;63H48,1[10C20%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[24;64H7[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [16;1H[24;64H6,0-1[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [15;1H[24;64H5,1  [15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [13;1H[24;64H4[13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [12;1H[24;64H3[12;1H[?25h[?25l[24;53H~@k[12;1H[24;53H   [11;1H[24;64H2[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [10;1H[24;64H1[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [9;1H[24;64H0[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [8;1H[24;63H39,0-1[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [7;1H[24;64H8,1  [7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H37,1[10C20%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H36,1[10C19%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[2;1H< endl;[24;63H[K[24;63H35,1[10C18%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H4[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H33,1[10C18%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[24;63H[K[24;63H32,0-1[8C17%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hselection_sort(library);[24;63H[K[24;63H31,1[10C16%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[24;63H[K[24;63H30,1[10C15%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [8;1H[24;64H1[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [9;1H[24;64H2,0-1[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [10;1H[24;64H3,1  [10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [11;1H[24;64H4[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [12;1H[24;64H5[12;1H[?25h[?25l[24;53H~@k[12;1H[24;53H   [13;1H[24;64H6[13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [14;1H[24;64H7[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [16;1H[24;64H8[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [17;1H[24;64H9,0-1[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;63H40,1  [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"quick_sort"[m);[24;63H[K[24;63H41,1[10C16%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H42,1[10C16%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5H[38;5;130mreturn[m [31m0[m;[24;63H[K[24;63H43,1[10C17%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;1H}[24;63H[K[24;63H44,1[10C18%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;[24;63H[K[24;63H45,1[10C19%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H6,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hfirst = second;[24;63H[K[24;63H47,1[10C20%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hsecond = temp;[24;63H[K[24;63H48,1[10C20%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H}[24;63H[K[24;63H49,0-1[8C21%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H50,1[10C22%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H[34m// sort by authorLastName[m[24;63H[K[24;63H51,1[10C22%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H[32mvoid[m insertion_sort(vector<Book> &library){[24;63H[K[24;63H52,1[10C23%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[23;9H[32mint[m currIDX = i;[24;63H[K[24;63H53,1[10C24%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[14;40H[106m{[18;1H}[m[24;64H4[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[12;40H{[16;1H}[22;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAutt[23;1HhorLastName()){[24;63H[K[24;63H55,0-1[8C25%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H6,1  [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[24;63H[K[24;63H57,1[10C25%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;13HcurrIDX -= [31m1[m;[24;63H[K[24;63H58,1[10C26%[18;1H[?25h[?25l[1;23r[23;1H
+[1;24r[23;9H}[24;63H[K[24;63H59,1[10C27%[18;1H[?25h[?25l[1;23r[1;1H[3M[1;24r[21;5H}
+}[24;63H[K[24;63H60,1[10C28%[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [18;1H[24;64H1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H[34m// sort by authorFirstName[m[24;63H[K[24;63H62,1[10C29%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H[32mvoid[m selection_sort(vector<Book> &library){[24;63H[K[24;63H63,1[10C30%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[24;63H[K[24;63H64,1[10C30%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[9;43H[106m{[18;1H}[m[23;9H[32mint[m minIDX = i;[24;63H[K[24;63H65,1[10C31%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[8;43H{[17;1H}[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;63H[K[24;63H66,0-1[8C32%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;13H[38;5;130mif[m(library[j].getAuthorFirstName() < library[minIDX].getAuthorFirstNN[23;1Hame()){[24;63H[K[24;63H67,1[10C33%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H8[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;17HminIDX = j;[24;63H[K[24;63H69,1[10C33%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;13H}[24;63H[K[24;63H70,1[10C34%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;9H}[24;63H[K[24;63H71,1[10C35%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;9Hswap(library[minIDX],library[i]);
+    }[24;63H[K[24;63H72,1[10C36%[17;1H[?25h[?25l[1;23r[23;1H
+[1;24r[23;1H}[24;63H[K[24;63H73,1[10C37%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H74,1[10C37%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1Hvector<Book> merge(vector<Book> & a, vector<Book> & b) {[24;63H[K[24;63H75,1[10C38%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hvector<Book> c;
+    [32mint[m aIdx = [31m0[m;[24;63H[K[24;63H76,1[10C39%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [16;1H[24;64H5[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [15;1H[24;64H4[15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [14;1H[24;64H3[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [12;1H[24;64H2[12;1H[?25h[?25l[24;53H~@k[12;1H[24;53H   [11;1H[24;64H1[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [10;1H[24;64H0[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [9;1H[24;63H69[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [8;1H[24;64H8[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [7;1H[24;64H7[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H6,0-1[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAutt[2;1HhorLastName()){[24;63H[K[24;63H65,1[10C38%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H4[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;9H[32mint[m currIDX = i;[24;63H[K[24;63H63,1[10C37%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[24;63H[K[24;63H62,1[10C37%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m insertion_sort(vector<Book> &library){[24;63H[K[24;63H61,1[10C36%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;1H[34m// sort by authorLastName[m[24;63H[K[24;63H60,1[10C35%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H}[24;63H[K[24;63H59,1[10C34%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hsecond = temp;[24;63H[K[24;63H58,1[10C33%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hfirst = second;[24;63H[K[24;63H57,1[10C33%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HBook temp = first;[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H56,1[10C32%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m swap(Book & first, Book & second) {[24;63H[K[24;63H55,0-1[8C32%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[2;40H[106m{[6;1H}[m[24;63H[K[24;63H54,1[10C31%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H}[3;40H{[7;1H}[24;63H[K[24;63H53,1[10C30%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[38;5;130mreturn[m [31m0[m;[24;63H[K[24;63H52,1[10C30%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H51,1[10C29%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"quick_sort"[m);[24;63H[K[24;63H50,1[10C28%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[2;1Hdl;[24;63H[K[24;63H49,0-1[8C27%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H8,1  [6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H47,1[10C27%[6;1H[?25h[?25l[1;23r[1;1H[L[1;24r[1;5Hend = clock();[24;63H[K[24;63H46,0-1[8C26%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hquick_sort(library, [31m0[m, library.size() - [31m1[m);[24;63H[K[24;63H45,1[10C25%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H44,1[10C24%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"merge_sort"[m);[24;63H[K[24;63H43,1[10C24%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for merge_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[2;1Hdl;[24;63H[K[24;63H42,1[10C23%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H1[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H40,1[10C22%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[24;63H[K[24;63H39,0-1[8C22%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hlibrary = merge_sort(library);[24;63H[K[24;63H38,1[10C21%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[24;63H[K[24;63H37,1[10C20%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H36,1[10C19%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[2;1H< endl;[24;63H[K[24;63H35,1[10C18%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H4[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H33,1[10C18%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hend = clock();[24;63H[K[24;63H32,0-1[8C17%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hselection_sort(library);[24;63H[K[24;63H31,1[10C16%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;5Hstart = clock();[24;63H[K[24;63H30,1[10C15%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HwriteFile(library, [31m"insertion_sort"[m);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H29,1[10C14%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[1;23r[1;1H[2L[1;24r[1;5Hcout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[2;1H< endl;[24;63H[K[24;63H28,1[10C14%[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;1H[24;64H7[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[32mdouble[m runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H26,1[10C13%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5H[32mclock_t[m end = clock();[24;63H[K[24;63H25,0-1[8C12%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hinsertion_sort(library);[24;63H[K[24;63H24,1[10C12%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[2L[1;24r[2;5H[32mclock_t[m start = clock();[24;63H[K[24;63H23,1[10C10%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5HreadFile(library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H22,1[10C10%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> library;[24;63H[K[24;63H21,1[11C9%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mint[m main(){[24;63H[K[24;63H20,1[11C9%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H19,1[11C8%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1HBook stringToBookParser([32mconst[m string & str);[24;63H[K[24;63H18,0-1[9C7%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);[24;63H[K[24;63H17,1[11C7%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1Hvector<Book> merge_sort(vector<Book> & library);[24;63H[K[24;63H16,1[11C6%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m selection_sort(vector<Book> & library);[24;63H[K[24;63H15,1[11C5%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m insertion_sort(vector<Book> & library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H14,0-1[9C5%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m writeFile(vector<Book> &library, string type);[24;63H[K[24;63H13,1[11C4%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m readFile(vector<Book> & library);[24;63H[K[24;63H12,1[11C3%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[34m// function prototype[m[24;63H[K[24;63H11,1[11C3%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H10,1[11C2%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m<fstream>[m[24;63H[K[24;63H9,1[12C1%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m"Book.h"[m[24;63H[K[24;63H8,1[12C1%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[34m// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m[24;63H[K[24;63H7,1[12C0%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[34m// Created by Alex Tran[m[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H6,1[11CTop[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [4;1H[24;63H4,1  [4;1H[?25h[?25l[24;53H~@k[4;1H[24;53H   [3;1H[24;63H3[3;1H[?25h[?25l[24;53H~@k[3;1H[24;53H   [2;1H[24;63H2[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [1;1H[24;63H1[1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [1;1H[?25h[?25l[24;53H~@k[1;1H[24;53H   [2;1H[24;63H2[2;1H[?25h[?25l[24;53H~@k[2;1H[24;53H   [3;1H[24;63H3[3;1H[?25h[?25l[24;53H~@k[3;1H[24;53H   [4;1H[24;63H4[4;1H[?25h[?25l[24;53H~@k[4;1H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [6;1H[24;63H6,1  [6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [7;1H[24;63H7[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [8;1H[24;63H8[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [9;1H[24;63H9[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [10;1H[24;63H10,1[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [11;1H[24;64H1[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [12;1H[24;64H2[12;1H[?25h[?25l[24;53H~@k[12;1H[24;53H   [13;1H[24;64H3[13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [14;1H[24;64H4,0-1[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [15;1H[24;64H5,1  [15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [16;1H[24;64H6[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [17;1H[24;64H7[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H8,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[22;1H    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;63H[K[24;63H19,1[11C0%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"insertion_sort"[m);[24;63H[K[24;63H20,1[11C1%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H21,1[11C1%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H22,1[11C2%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hselection_sort(library);
+    end = clock();[24;63H[K[24;63H23,1[11C3%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H24,1[11C4%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;63H[K[24;63H25,0-1[9C5%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;1H[24;64H6,1  [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H27,1[11C6%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H28,1[11C7%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H29,1[11C7%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[24;64H8[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [16;1H[24;64H7[16;1H[?25h[?25l[24;53H~@k[16;1H[24;53H   [15;1H[24;64H6[15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [14;1H[24;64H5,0-1[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [13;1H[24;64H4,1  [13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [11;1H[24;64H3[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [10;1H[24;64H2[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [9;1H[24;64H1[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [8;1H[24;64H0[8;1H[?25h[?25l[24;53H~@k[8;1H[24;53H   [9;1H[24;64H1[9;1H[?25h[?25l[24;53H~@k[9;1H[24;53H   [10;1H[24;64H2[10;1H[?25h[?25l[24;53H~@k[10;1H[24;53H   [11;1H[24;64H3[11;1H[?25h[?25l[24;53H~@k[11;1H[24;53H   [13;1H[24;64H4[13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [14;1H[24;64H5,0-1[14;1H[?25h[?25l[24;53H~@k[14;1H[24;53H   [13;1H[24;64H4,1  [13;1H[?25h[?25l[24;53H~@k[13;1H[24;53H   [13;2H[24;66H2[13;2H[?25h[?25l[24;53H~@k[13;2H[24;53H   [13;3H[24;66H3[13;3H[?25h[?25l[24;53H~@k[13;3H[24;53H   [13;4H[24;66H4[13;4H[?25h[?25l[24;53H~@k[13;4H[24;53H   [13;5H[24;66H5[13;5H[?25h[?25l[24;53H~@k[13;5H[24;53H   [13;6H[24;66H6[13;6H[?25h[?25l[24;53H~@k[13;6H[24;53H   [13;7H[24;66H7[13;7H[?25h[?25l[24;53H~@k[13;7H[24;53H   [13;8H[24;66H8[13;8H[?25h[?25l[24;53H~@k[13;8H[24;53H   [13;9H[24;66H9[13;9H[?25h[?25l[24;53H~@k[13;9H[24;53H   [13;10H[24;66H10[13;10H[?25h[?25l[24;53H~@k[13;10H[24;53H   [13;11H[24;67H1[13;11H[?25h[?25l[24;53H~@k[13;11H[24;53H   [13;12H[24;67H2[13;12H[?25h[?25l[24;53H~@k[13;12H[24;53H   [13;13H[24;67H3[13;13H[?25h[?25l[24;53H~@k[13;13H[24;53H   [13;14H[106m([25C)[m[24;67H4[13;14H[?25h[?25l[24;53H~@k[13;14H[24;53H   [13;15H([25C)[24;67H5[13;15H[?25h[?25l[24;53H~@k[13;15H[24;53H   [13;16H[24;67H6[13;16H[?25h[?25l[24;53H~@k[13;16H[24;53H   [13;17H[24;67H7[13;17H[?25h[?25l[24;53H~@k[13;17H[24;53H   [13;18H[24;67H8[13;18H[?25h[?25l[24;53H~@k[13;18H[24;53H   [13;19H[24;67H9[13;19H[?25h[?25l[24;53H~@k[13;19H[24;53H   [13;20H[24;66H20[13;20H[?25h[?25l[24;53H~@k[13;20H[24;53H   [13;21H[24;67H1[13;21H[?25h[?25l[24;53H~@k[13;21H[24;53H   [13;22H[24;67H2[13;22H[?25h[?25l[24;53H~@k[13;22H[24;53H   [13;23H[24;67H3[13;23H[?25h[?25l[24;53H~@k[13;23H[24;53H   [13;24H[24;67H4[13;24H[?25h[?25l[24;53H~@k[13;24H[24;53H   [13;25H[24;67H5[13;25H[?25h[?25l[24;53H~@k[13;25H[24;53H   [13;26H[24;67H6[13;26H[?25h[?25l[24;53H~@k[13;26H[24;53H   [13;27H[24;67H7[13;27H[?25h[?25l[24;53H~@k[13;27H[24;53H   [13;28H[24;67H8[13;28H[?25h[?25l[24;53H~@k[13;28H[24;53H   [13;29H[24;67H9[13;29H[?25h[?25l[24;53H~@k[13;29H[24;53H   [13;30H[24;66H30[13;30H[?25h[?25l[24;53H~@k[13;30H[24;53H   [13;31H[24;67H1[13;31H[?25h[?25l[24;53H~@k[13;31H[24;53H   [13;32H[24;67H2[13;32H[?25h[?25l[24;53H~@k[13;32H[24;53H   [13;33H[24;67H3[13;33H[?25h[?25l[24;53H~@k[13;33H[24;53H   [13;34H[24;67H4[13;34H[?25h[?25l[24;53H~@k[13;34H[24;53H   [13;35H[24;67H5[13;35H[?25h[?25l[24;53H~@k[13;35H[24;53H   [13;36H[24;67H6[13;36H[?25h[?25l[24;53H~@k[13;36H[24;53H   [13;37H[24;67H7[13;37H[?25h[?25l[24;53H~@k[13;37H[24;53H   [13;38H[24;67H8[13;38H[?25h[?25l[24;53H~@k[13;38H[24;53H   [13;39H[24;67H9[13;39H[?25h[?25l[24;53H~@k[13;39H[24;53H   [13;40H[13;14H[106m([25C)[m[24;66H40[13;40H[?25h[?25l[24;53H~@k[13;40H[24;53H   [13;41H[13;14H([25C)[24;67H1[13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [13;41H[?25h[?25l[24;53H^[[13;41H[24;53H  [13;41H[24;53H^[[13;41H[24;53H  [13;41H[?25h[?25l[24;53H:[13;41H[24;53H[K[24;1H:[?2004h[?25hq[?25l[?25h![?25l[?25h[?25l[?2004l[24;1H[K[24;1H[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim main.cpp[3P./hw5.exe
+Segmentation fault (core dumped)
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ c [Kd [K[K[Kvim main.cpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"main.cpp" 175L, 4962C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[32mvoid[m writeFile(vector<Book> &library, string type);
+[32mvoid[m insertion_sort(vector<Book> & library);
+[32mvoid[m selection_sort(vector<Book> & library);
+vector<Book> merge_sort(vector<Book> & library);
+[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);
+Book stringToBookParser([32mconst[m string & str);
+
+[32mint[m main(){
+    vector<Book> library;
+    readFile(library);[12;5H[32mclock_t[m start = clock();
+    insertion_sort(library);
+    [32mclock_t[m end = clock();
+    [32mdouble[m runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);
+    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[17;1H< endl;
+    writeFile(library, [31m"insertion_sort"[m);[20;5Hstart = clock();
+    selection_sort(library);
+    end = clock();
+    runtime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H24,41[10C4%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [16;41H[24;64H3[16;41H[?25h[?25l[24;53H~@k[16;41H[24;53H   [15;41H[24;64H2[15;41H[?25h[?25l[24;64H1,26[14;26H[?25h[?25l[24;53H~@k[14;26H[24;53H   [15;41H[24;64H2,41[15;41H[?25h[?25l[24;53H~@k[15;41H[24;53H   [16;41H[24;64H3[16;41H[?25h[?25l[24;53H~@k[16;41H[24;53H   [18;41H[24;64H4[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;1H[K[24;63H25,0-1[9C5%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;20H[24;64H6,20 [18;20H[?25h[?25l[24;53H~@k[18;20H[24;53H   [18;28H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H27,28[10C6%[18;28H[?25h[?25l[24;53H~@k[18;28H[24;53H   [18;18H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H28,18[10C7%[18;18H[?25h[?25l[24;53H~@k[18;18H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H29,41[10C7%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;41H[1;23r[1;1H[2M[1;24r[22;5Hlibrary = merge_sort(library);
+    end = clock();[24;63H[K[24;63H30,41[10C9%[17;41H[?25h[?25l[24;53H~@k[17;41H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H31,41[10C9%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for merge_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[23;1Hdl;[24;63H[K[24;63H32,0-1[8C10%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;20H[24;64H3,20 [18;20H[?25h[?25l[24;53H~@k[18;20H[24;53H   [18;34H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"merge_sort"[m);[24;63H[K[24;63H34,34[9C11%[18;34H[?25h[?25l[24;53H~@k[18;34H[24;53H   [18;18H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H35,18[9C12%[18;18H[?25h[?25l[24;53H~@k[18;18H[24;53H   [17;34H[24;64H4,34[17;34H[?25h[?25l[24;53H~@k[17;34H[24;53H   [16;20H[24;64H3,20[16;20H[?25h[?25l[24;53H~@k[16;20H[24;53H   [15;1H[24;64H2,0-1[15;1H[?25h[?25l[24;53H~@k[15;1H[24;53H   [14;41H[24;64H1,41 [14;41H[?25h[?25l[24;53H~@k[14;41H[24;53H   [12;41H[24;64H0[12;41H[?25h[?25l[24;53H~@k[12;41H[24;53H   [11;41H[24;63H29[11;41H[?25h[?25l[24;53H~@k[11;41H[24;53H   [10;18H[24;64H8,18[10;18H[?25h[?25l[24;53H~@k[10;18H[24;53H   [9;28H[24;64H7,2[9;28H[?25h[?25l[24;53H~@k[9;28H[24;53H   [8;20H[24;64H6,20[8;20H[?25h[?25l[24;53H~@k[8;20H[24;53H   [7;1H[24;64H5,0-1[7;1H[?25h[?25l[24;53H~@k[7;1H[24;53H   [6;41H[24;64H4,41 [6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[2L[1;24r[2;5H[32mclock_t[m start = clock();[24;63H[K[24;63H23,41[9C10%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;5HreadFile(library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H22,41[9C10%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;26H[1;23r[1;1H[L[1;24r[1;5Hvector<Book> library;[24;63H[K[24;63H21,26[10C9%[6;26H[?25h[?25l[24;53H~@k[6;26H[24;53H   [6;28H[1;23r[1;1H[L[1;24r[1;1H[32mint[m main(){[24;63H[K[24;63H20,28[10C9%[6;28H[?25h[?25l[24;53H~@k[6;28H[24;53H   [6;28H[1;23r[1;1H[L[1;24r[24;63H[K[24;63H19,28[10C8%[6;28H[?25h[?25l[24;53H~@k[6;28H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1HBook stringToBookParser([32mconst[m string & str);[24;63H[K[24;63H18,0-1[9C7%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;22H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m quick_sort(vector<Book> & library, [32mint[m low, [32mint[m high);[24;63H[K[24;63H17,22[10C7%[6;22H[?25h[?25l[24;53H~@k[6;22H[24;53H   [6;25H[1;23r[1;1H[L[1;24r[1;1Hvector<Book> merge_sort(vector<Book> & library);[24;63H[K[24;63H16,25[10C6%[6;25H[?25h[?25l[24;53H~@k[6;25H[24;53H   [6;11H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m selection_sort(vector<Book> & library);[24;63H[K[24;63H15,11[10C5%[6;11H[?25h[?25l[24;53H~@k[6;11H[24;53H   [6;1H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m insertion_sort(vector<Book> & library);[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H14,0-1[9C5%[6;1H[?25h[?25l[24;53H~@k[6;1H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m writeFile(vector<Book> &library, string type);[24;63H[K[24;63H13,41[10C4%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;1H[32mvoid[m readFile(vector<Book> & library);[24;63H[K[24;63H12,41[10C3%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;1H[34m// function prototype[m[24;63H[K[24;63H11,41[10C3%[6;41H[?25h[?25l[1;23r[1;1H[L[1;24r[24;63H[K[24;63H10,41[10C2%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m<fstream>[m[24;63H[K[24;63H9,41[11C1%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;41H[1;23r[1;1H[L[1;24r[1;1H[35m#include [m[31m"Book.h"[m[24;63H[K[24;63H8,41[11C1%[6;41H[?25h[?25l[24;53H~@k[6;41H[24;53H   [6;38H[1;23r[1;1H[L[1;24r[1;1H[34m// Today date: Apr, [m[31m5[m[34m, [m[31m2023[m[24;63H[K[24;63H7,38[11C0%[6;38H[?25h[?25l[24;53H~@k[6;38H[24;53H   [6;21H[1;23r[1;1H[L[1;24r[1;1H[34m// Created by Alex Tran[m[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H6,21[10CTop[6;21H[?25h[?25l[24;53H~@k[6;21H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [4;18H[24;63H4,18 [4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [3;17H[24;63H3,17[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [2;27H[24;63H2,2[2;27H[?25h[?25l[24;53H~@k[2;27H[24;53H   [1;23H[24;63H1,23[1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [1;23H[?25h[?25l[24;53H~@k[1;23H[24;53H   [2;27H[24;63H2,27[2;27H[?25h[?25l[24;63H3,1[3;17H[?25h[?25l[24;53H~@k[3;17H[24;53H   [4;18H[24;63H4,18[4;18H[?25h[?25l[24;53H~@k[4;18H[24;53H   [5;1H[24;63H5,0-1[5;1H[?25h[?25l[24;53H~@k[5;1H[24;53H   [6;21H[24;63H6,21 [6;21H[?25h[?25l[24;53H~@k[6;21H[24;53H   [7;38H[24;63H7,38[7;38H[?25h[?25l[24;53H~@k[7;38H[24;53H   [8;41H[24;63H8,41[8;41H[?25h[?25l[24;53H~@k[8;41H[24;53H   [9;41H[24;63H9[9;41H[?25h[?25l[24;53H~@k[9;41H[24;53H   [10;41H[24;63H10,41[10;41H[?25h[?25l[24;53H~@k[10;41H[24;53H   [11;41H[24;64H1[11;41H[?25h[?25l[24;53H~@k[11;41H[24;53H   [12;41H[24;64H2[12;41H[?25h[?25l[24;53H~@k[12;41H[24;53H   [13;41H[24;64H3[13;41H[?25h[?25l[24;53H~@k[13;41H[24;53H   [14;1H[24;64H4,0-1[14;1H[?25h[?25l[24;64H5,11 [15;11H[?25h[?25l[24;53H~@k[15;11H[24;53H   [16;25H[24;64H6,25[16;25H[?25h[?25l[24;53H~@k[16;25H[24;53H   [17;22H[24;64H7,22[17;22H[?25h[?25l[24;53H~@k[17;22H[24;53H   [18;1H[24;64H8,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;28H[1;23r[23;1H
+[1;24r[22;1H    cout << [31m"Run time for insertion_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;63H[K[24;63H19,28[10C0%[18;28H[?25h[?25l[24;53H~@k[18;28H[24;53H   [18;28H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"insertion_sort"[m);[24;63H[K[24;63H20,28[10C1%[18;28H[?25h[?25l[24;53H~@k[18;28H[24;53H   [18;26H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H21,26[10C1%[18;26H[?25h[?25l[24;53H~@k[18;26H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H22,41[10C2%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;41H[1;23r[1;1H[2M[1;24r[22;5Hselection_sort(library);
+    end = clock();[24;63H[K[24;63H23,41[10C3%[17;41H[?25h[?25l[24;53H~@k[17;41H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H24,41[10C4%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for selection_sort algorithm: "[m << runtime << [31m" seconds"[m <<[23;1H< endl;[24;63H[K[24;63H25,0-1[9C5%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;20H[24;64H6,20 [18;20H[?25h[?25l[24;53H~@k[18;20H[24;53H   [18;28H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"selection_sort"[m);[24;63H[K[24;63H27,28[10C6%[18;28H[?25h[?25l[24;53H~@k[18;28H[24;53H   [18;18H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H28,18[10C7%[18;18H[?25h[?25l[24;53H~@k[18;18H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H29,41[10C7%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;41H[1;23r[1;1H[2M[1;24r[22;5Hlibrary = merge_sort(library);
+    end = clock();[24;63H[K[24;63H30,41[10C9%[17;41H[?25h[?25l[24;53H~@k[17;41H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);[24;63H[K[24;63H31,41[10C9%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[22;5Hcout << [31m"Run time for merge_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[23;1Hdl;[24;63H[K[24;63H32,0-1[8C10%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;20H[24;64H3,20 [18;20H[?25h[?25l[24;53H~@k[18;20H[24;53H   [18;34H[1;23r[23;1H
+[1;24r[23;5HwriteFile(library, [31m"merge_sort"[m);[24;63H[K[24;63H34,34[9C11%[18;34H[?25h[?25l[24;53H~@k[18;34H[24;53H   [18;18H[1;23r[23;1H
+[1;24r[24;63H[K[24;63H35,18[9C12%[18;18H[?25h[?25l[24;53H~@k[18;18H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5Hstart = clock();[24;63H[K[24;63H36,41[9C12%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;41H[1;23r[1;1H[2M[1;24r[22;5Hquick_sort(library, [31m0[m, library.size() - [31m1[m);
+    end = clock();[24;63H[K[24;63H37,41[9C14%[17;41H[?25h[?25l[24;53H~@k[17;41H[24;53H   [17;37H[1;23r[1;1H[2M[1;24r[22;5Hruntime = (end - start) / [32mdouble[m([31mCLOCKS_PER_SEC[m);
+    cout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << en[23;1H[94m@@@                                                                             [m[24;63H[K[24;63H38,37[9C14%[17;37H[?25h[?25l[24;53H~@k[17;37H[24;53H   [18;1H[24;64H9,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;20H[1;23r[23;1H
+[1;24r[22;1H    cout << [31m"Run time for quick_sort algorithm: "[m << runtime << [31m" seconds"[m << enn[23;1Hdl;[24;63H[K[24;63H40,20[9C15%[18;20H[?25h[?25l[24;53H~@k[18;20H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[18;40H[106m()[m[23;5HwriteFile(library, [31m"quick_sort"[m);[24;63H[K[24;63H41,41[9C16%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [18;18H[1;23r[23;1H
+[1;24r[17;40H()[24;63H[K[24;63H42,18[9C16%[18;18H[?25h[?25l[24;53H~@k[18;18H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;5H[38;5;130mreturn[m [31m0[m;[24;63H[K[24;63H43,41[9C17%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [17;41H[1;23r[1;1H[2M[1;24r[22;1H}[24;63H[K[24;63H44,41[9C18%[17;41H[?25h[?25l[24;53H~@k[17;41H[24;53H   [17;37H[1;23r[1;1H[2M[1;24r[22;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;[24;63H[K[24;63H45,37[9C19%[17;37H[?25h[?25l[24;53H~@k[17;37H[24;53H   [18;1H[24;64H6,0-1[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;13H[1;23r[23;1H
+[1;24r[23;5Hfirst = second;[24;63H[K[24;63H47,13[9C20%[18;13H[?25h[?25l[24;53H~@k[18;13H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;5Hsecond = temp;[24;63H[K[24;63H48,1[10C20%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[23;1H}[24;63H[K[24;63H49,0-1[8C21%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [18;40H[1;23r[23;1H
+[1;24r[18;40H[106m{[22;1H}[m[24;63H[K[24;63H50,40[9C22%[18;40H[?25h[?25l[24;53H~@k[18;40H[24;53H   [18;22H[1;23r[23;1H
+[1;24r[17;40H{[21;1H}
+
+[34m// sort by authorLastName[m[24;63H[K[24;63H51,22[9C22%[18;22H[?25h[?25l[24;53H~@k[18;22H[24;53H   [18;19H[1;23r[23;1H
+[1;24r[23;1H[32mvoid[m insertion_sort(vector<Book> &library){[24;63H[K[24;63H52,19[9C23%[18;19H[?25h[?25l[24;53H~@k[18;19H[24;53H   [17;18H[1;23r[1;1H[2M[1;24r[22;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[23;9H[32mint[m currIDX = i;[24;63H[K[24;63H53,18[9C24%[17;18H[?25h[?25l[24;53H~@k[17;18H[24;53H   [18;1H[14;40H[106m{[18;1H}[m[24;64H4,1 [18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;1H[1;23r[1;1H[2M[1;24r[12;40H{[16;1H}[22;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAutt[23;1HhorLastName()){[24;63H[K[24;63H55,0-1[8C25%[17;1H[?25h[?25l[24;53H~@k[17;1H[24;53H   [18;25H[24;64H6,25 [18;25H[?25h[?25l[24;53H~@k[18;25H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[24;63H[K[24;63H57,41[9C25%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [18;41H[1;23r[23;1H
+[1;24r[23;13HcurrIDX -= [31m1[m;[24;63H[K[24;63H58,41[9C26%[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [18;24H[1;23r[23;1H
+[1;24r[23;9H}[24;63H[K[24;63H59,24[9C27%[18;24H[?25h[?25l[24;53H~@k[18;24H[24;53H   [16;41H[1;23r[1;1H[3M[1;24r[21;5H}
+}[24;63H[K[24;63H60,41[9C28%[16;41H[?25h[?25l[24;53H~@k[16;41H[24;53H   [18;41H[24;64H1[18;41H[?25h[?25l[24;53H~@k[18;41H[24;53H   [18;25H[1;23r[23;1H
+[1;24r[23;1H[34m// sort by authorFirstName[m[24;63H[K[24;63H62,25[9C29%[18;25H[?25h[?25l[24;53H~@k[18;25H[24;53H   [18;9H[1;23r[23;1H
+[1;24r[15;15H[106m{[18;9H}[m[23;1H[32mvoid[m selection_sort(vector<Book> &library){[24;63H[K[24;63H63,9[10C30%[18;9H[?25h[?25l[24;53H~@k[18;9H[24;53H   [18;5H[1;23r[23;1H
+[1;24r[11;45H[106m{[m[14;15H{[17;9H}
+    [106m}[m[23;5H[38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[24;63H[K[24;63H64,5[10C30%[18;5H[?25h[?25l[24;53H~@k[18;5H[24;53H   [18;1H[1;23r[23;1H
+[1;24r[9;43H[106m{[m[10;45H{[17;5H}
+[106m}[m[23;9H[32mint[m minIDX = i;[24;63H[K[24;63H65,1[10C31%[18;1H[?25h[?25l[24;53H~@k[18;1H[24;53H   [17;5H[9;43H{[10;45H[106m{[17;5H}[m
+}[24;64H4,5[17;5H[?25h[?25l[24;53H~@k[17;5H[24;53H   [16;9H[10;45H{[13;15H[106m{[16;9H}[m
+    }[24;64H3,9[16;9H[?25h[?25l[24;53H~@k[16;9H[24;53H   [15;25H[13;15H{[16;9H}[24;64H2,25[15;25H[?25h[?25l[24;53H~@k[15;25H[24;53H   [14;41H[24;64H1,41[14;41H[?25h[?25l[24;53H~@k[14;41H[24;53H   [12;41H[24;64H0[12;41H[?25h[?25l[24;53H~@k[12;41H[24;53H   [12;40H[24;67H0[12;40H[?25h[?25l[24;53H~@k[12;40H[24;53H   [12;39H[24;66H39[12;39H[?25h[?25l[24;53H~@k[12;39H[24;53H   [12;38H[24;67H8[12;38H[?25h[?25l[24;53H~@k[12;38H[24;53H   [12;37H[24;67H7[12;37H[?25h[?25l[24;53H~@k[12;37H[24;53H   [12;36H[24;67H6[12;36H[?25h[?25l[24;53H~@k[12;36H[24;53H   [12;35H[24;67H5[12;35H[?25h[?25l[24;53H~@k[12;35H[24;53H   [12;34H[24;67H4[12;34H[?25h[?25l[24;53H~@k[12;34H[24;53H   [12;33H[24;67H3[12;33H[?25h[?25l[24;53H~@k[12;33H[24;53H   [12;32H[24;67H2[12;32H[?25h[?25l[24;53H~@k[12;32H[24;53H   [12;31H[24;67H1[12;31H[?25h[?25l[24;53H~@k[12;31H[24;53H   [12;30H[12;22H[106m[[7C][m[49Ctt[13;1Hh[24;67H0[12;30H[?25h[?25l[24;53H~@k[12;30H[24;53H   [12;29H[12;22H[[7C][49Ctt[13;1Hh[24;66H29[12;29H[?25h[?25l[24;53H~@k[12;29H[24;53H   [12;28H[24;67H8[12;28H[?25h[?25l[24;53H~@k[12;28H[24;53H   [12;27H[24;67H7[12;27H[?25h[?25l[24;53H~@k[12;27H[24;53H   [12;26H[24;67H6[12;26H[?25h[?25l[24;53H~@k[12;26H[24;53H   [12;25H[24;67H5[12;25H[?25h[?25l[24;53H~@k[12;25H[24;53H   [12;24H[24;67H4[12;24H[?25h[?25l[24;53H~@k[12;24H[24;53H   [12;23H[24;67H3[12;23H[?25h[?25l[24;53H~@k[12;23H[24;53H   [12;22H[106m[[7C][m[49Ctt[13;1Hh[24;67H2[12;22H[?25h[?25l[24;53H~@k[12;22H[24;53H   [12;21Hy[[7C][49Ctt[13;1Hh[24;67H1[12;21H[?25h[?25l[24;53H~@k[12;21H[24;53H   [12;20H[24;67H0[12;20H[?25h[?25l[24;53H~@k[12;20H[24;53H   [12;19H[24;66H19[12;19H[?25h[?25l[24;53H~@k[12;19H[24;53H   [12;18H[24;67H8[12;18H[?25h[?25l[24;53H~@k[12;18H[24;53H   [12;17H[24;67H7[12;17H[?25h[?25l[24;53H~@k[12;17H[24;53H   [12;16H[24;67H6[12;16H[?25h[?25l[24;53H~@k[12;16H[24;53H   [12;15H[24;67H5[12;15H[?25h[?25l[24;53H~@k[12;15H[24;53H   [12;14H[106m([m[65Ctt[13;1Hh[12C[106m)[m[24;67H4[12;14H[?25h[?25l[24;53H~@k[12;14H[24;53H   [12;13H[1C([65Ctt[13;1Hh[12C)[24;67H3[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthh[13;1HorLastName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;64H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthoo[13;1HrLastName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;65H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorr[13;1HLastName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;66H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLL[13;1HastName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;67H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLass[13;1HtName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;69H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastt[13;1HName()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;70H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastNN[13;1Hame()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;71H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastNaa[13;1Hme()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;72H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastNamm[13;1He()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;73H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastNamee[13;1H()){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;74H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName(([13;1H)){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;75H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName())[13;1H){[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;76H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()))[13;1H{[14;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[15;13HcurrIDX -= [31m1[m;[16;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[23;9H[32mint[m minIDX = i;[24;77H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;78H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;80H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;81H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;82H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;83H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;84H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;85H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;86H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;87H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;88H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;89H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;90H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;91H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;92H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;93H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;94H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;95H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;96H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;97H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;98H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;99H60,13[9C31%[12;13H[?25h[27m[23m[29m[m[H[2J[?25l[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;100H60,13[9C31%[12;13H[?25h[?25l[24;90H~@k[12;13H[24;90H   [12;14H[106m([79C)[m[24;104H4[12;14H[?25h[?25l[24;90H~@k[12;14H[24;90H   [12;15H([79C)[24;104H5[12;15H[?25h[?25l[24;90Hc[12;15H[?25h[?25l[24;91Hu[12;15H[24;90H  [12;15H[?25h[?25l[24;90Hr[12;15H[?25h[?25l[24;91Hi[12;15H[24;90H  [12;15Hi[?25h[?25l[24;90Hc[12;15H[?25h[?25l[24;91Hu[12;15H[24;90H  [12;15H[?25h[?25l[24;90H~@k[12;15H[24;90H   [12;16H[24;104H6[12;16H[?25h[?25l[24;90H~@k[12;16H[24;90H   [12;15H[24;104H5[12;15H[?25h[?25l[24;90H~@k[12;15H[24;90H   [12;16H[24;104H6[12;16H[?25h[?25l[24;90H~@k[12;16H[24;90H   [12;15H[24;104H5[12;15H[?25h[?25l[24;90H~@k[12;15H[24;90H   [12;14H[106m([79C)[m[24;104H4[12;14H[?25h[?25l[24;90H~@k[12;14H[24;90H   [12;15H([79C)[24;104H5[12;15H[?25h[?25l[24;90Hi[12;15H[24;90H [12;15H[24;1H[1m-- INSERT --[m[24;100H[K[24;100H60,15[9C31%[12;15H[?25h[?25l[24;104H6[12;16H[?25h[?25lbrary[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;95H[K[12;14H[106m([78C)[m[24;104H5[12;15H[?25h[?25llibrary[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName([1C){[12;14H([78C)[24;104H6[12;16H[?25h[?25l[106m([79C)[m[24;104H5[12;15H[?25h[?25l library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName([1C){[12;14H([79C)[24;104H6[12;16H[?25h[?25l[106m([80C)[m[24;104H5[12;15H[?25h[?25lc library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName([1C){[12;14H([80C)[24;104H6[12;16H[?25h[?25lu library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H7[12;17H[?25h[?25lr library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H8[12;18H[?25h[?25lr library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H9[12;19H[?25h[?25lI library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;103H20[12;20H[?25h[?25ld library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H1[12;21H[?25h[?25lx library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H2[12;22H[?25h[?25l! library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H3[12;23H[?25h[?25l library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;104H[K[24;104H2[12;22H[?25h[?25l! library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H3[12;23H[?25h[?25l library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;104H[K[24;104H2[12;22H[?25h[?25l  library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H3[12;23H[?25h[?25l! library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H4[12;24H[?25h[?25l library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;105H[K[24;104H3[12;23H[?25h[?25llibrary[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;104H[K[24;104H2[12;22H[?25h[?25l  library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H3[12;23H[?25h[?25l> library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H4[12;24H[?25h[?25l  library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H5[12;25H[?25h[?25l[31m0[m library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H6[12;26H[?25h[?25l  library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H7[12;27H[?25h[?25l& library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H8[12;28H[?25h[?25l& library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H9[12;29H[?25h[?25l  library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;103H30[12;30H[?25h[?25l[24;104H1[12;31H[?25h[?25l[24;104H0[12;30H[?25h[?25l[24;104H1[12;31H[?25h[?25llibrary[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;111H[K[24;104H0[12;30H[?25h[?25l[24;104H1[12;31H[?25h[?25l[24;104H2[12;32H[?25h[?25l[24;104H3[12;33H[?25h[?25l[24;104H4[12;34H[?25h[?25l[24;104H5[12;35H[?25h[?25l[24;104H6[12;36H[?25h[?25ly[106m[[7C][m[24;104H7[12;37H[?25h[?25l[24;104H8[12;38H[?25h[?25l[[7C][24;104H9[12;39H[?25h[?25l[24;103H40[12;40H[?25h[?25l[24;104H1[12;41H[?25h[?25l[24;104H2[12;42H[?25h[?25l[24;104H3[12;43H[?25h[?25l[24;104H4[12;44H[?25h[?25l[12;37H[106m[[7C][m[24;104H5[12;45H[?25h[?25l[24;104H6[12;46H[?25h[?25l[12;37H[[7C][24;104H7[12;47H[?25h[?25l[24;104H8[12;48H[?25h[?25l[24;104H9[12;49H[?25h[?25l[24;103H50[12;50H[?25h[?25l[24;104H1[12;51H[?25h[?25l[24;104H2[12;52H[?25h[?25l[24;104H4[12;54H[?25h[?25l[24;104H5[12;55H[?25h[?25l[24;104H7[12;57H[?25h[?25l[24;104H8[12;58H[?25h[?25l[24;104H9[12;59H[?25h[?25l[24;103H60[12;60H[?25h[?25l[24;104H1[12;61H[?25h[?25l[24;104H2[12;62H[?25h[?25l[24;104H3[12;63H[?25h[?25le[106m()[m[24;104H4[12;64H[?25h[?25l[24;104H5[12;65H[?25h[?25l[24;104H6[12;66H[?25h[?25l()[24;104H7[12;67H[?25h[?25l[24;104H8[12;68H[?25h[?25l[24;104H9[12;69H[?25h[?25l[24;103H70[12;70H[?25h[?25l[24;104H1[12;71H[?25h[?25l[24;104H2[12;72H[?25h[?25l[24;104H3[12;73H[?25h[?25l[24;104H4[12;74H[?25h[?25l[24;104H5[12;75H[?25h[?25ly[106m[[11C][m[24;104H6[12;76H[?25h[?25l[24;104H7[12;77H[?25h[?25l[[11C][24;104H8[12;78H[?25h[?25l[24;104H9[12;79H[?25h[?25l[24;103H80[12;80H[?25h[?25l[24;104H1[12;81H[?25h[?25l[24;104H2[12;82H[?25h[?25l[24;104H3[12;83H[?25h[?25l[24;104H4[12;84H[?25h[?25l[24;104H5[12;85H[?25h[?25l[24;104H6[12;86H[?25h[?25l[24;104H7[12;87H[?25h[?25l[12;76H[106m[[11C][m[24;104H8[12;88H[?25h[?25l[24;104H9[12;89H[?25h[?25l[12;76H[[11C][24;103H90[12;90H[?25h[?25l[24;104H1[12;91H[?25h[?25l[24;104H2[12;92H[?25h[?25l[24;104H3[12;93H[?25h[?25l[24;104H4[12;94H[?25h[?25l[24;104H5[12;95H[?25h[24;1H[K[12;94H[?25l[24;90H^[[12;94H[24;90H  [12;95H[24;100H60,94[9C31%[12;94H[?25h[?25l[24;90H:[12;94H[24;90H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"main.cpp" 175L, 4977C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim main.cpp[3P./hw5.exevim main.cpp[3P./hw5.exe[2Phw5.exels[Kg++ -std=c++11 main.cpp Book.cpp -o hw5.exe
+[01m[Kmain.cpp:[m[K In function ‘[01m[Kvoid insertion_sort(std::vector<Book>&)[m[K’:
+[01m[Kmain.cpp:60:15:[m[K [01;31m[Kerror: [m[K‘[01m[KcurrIdx[m[K’ was not declared in this scope
+         while([01;31m[KcurrIdx[m[K > 0 && library[currIDX].getAuthorLastName() < library[currIDX - 1].getAuthorLastName()){
+               [01;31m[K^~~~~~~[m[K
+[01m[Kmain.cpp:60:15:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KcurrIDX[m[K’
+         while([01;36m[KcurrIdx[m[K > 0 && library[currIDX].getAuthorLastName() < library[currIDX - 1].getAuthorLastName()){
+               [01;36m[K^~~~~~~[m[K
+               [32m[KcurrIDX[m[K
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ g++ -std=c++11 main.cpp Book.cpp -o hw5.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim main.cpp[K[3P./hw5.exevim main.cpp
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"main.cpp" 175L, 4977C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[32mvoid[m swap(Book & first, Book & second) {
+    Book temp = first;
+    first = second;
+    second = temp;
+}
+
+[34m// sort by authorLastName[m
+[32mvoid[m insertion_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++) {[11;9H[32mint[m currIDX = i;[12;9H[38;5;130mwhile[m(currIdx > [31m0[m && library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[13;13Hswap(library[currIDX], library[currIDX - [31m1[m]);[14;13HcurrIDX -= [31m1[m;[15;9H}
+    }
+}
+
+[34m// sort by authorFirstName[m
+[32mvoid[m selection_sort(vector<Book> &library){
+    [38;5;130mfor[m([32mint[m i = [31m0[m; i < library.size(); i++){[22;9H[32mint[m minIDX = i;[23;9H[38;5;130mfor[m([32mint[m j = i; j < library.size(); j++){[24;100H60,94[9C31%[12;94H[?25h[?25l[24;90H~@k[12;94H[24;90H   [13;57H[24;101H1,57[13;57H[?25h[?25l[24;90H~@k[13;57H[24;90H   [12;94H[24;101H0,94[12;94H[?25h[?25l[24;90H~@k[12;94H[24;90H   [12;93H[24;104H3[12;93H[?25h[?25l[24;90H~@k[12;93H[24;90H   [12;92H[24;104H2[12;92H[?25h[?25l[24;90H~@k[12;92H[24;90H   [12;91H[24;104H1[12;91H[?25h[?25l[24;90H~@k[12;91H[24;90H   [12;90H[24;104H0[12;90H[?25h[?25l[24;90H~@k[12;90H[24;90H   [12;89H[24;103H89[12;89H[?25h[?25l[24;90H~@k[12;89H[24;90H   [12;88H[12;76H[106m[[11C][m[24;104H8[12;88H[?25h[?25l[24;90H~@k[12;88H[24;90H   [12;87H[12;76H[[11C][24;104H7[12;87H[?25h[?25l[24;90H~@k[12;87H[24;90H   [12;86H[24;104H6[12;86H[?25h[?25l[24;90H~@k[12;86H[24;90H   [12;85H[24;104H5[12;85H[?25h[?25l[24;90H~@k[12;85H[24;90H   [12;84H[24;104H4[12;84H[?25h[?25l[24;90H~@k[12;84H[24;90H   [12;83H[24;104H3[12;83H[?25h[?25l[24;90H~@k[12;83H[24;90H   [12;82H[24;104H2[12;82H[?25h[?25l[24;90H~@k[12;82H[24;90H   [12;81H[24;104H1[12;81H[?25h[?25l[24;90H~@k[12;81H[24;90H   [12;80H[24;104H0[12;80H[?25h[?25l[24;90H~@k[12;80H[24;90H   [12;79H[24;103H79[12;79H[?25h[?25l[24;90H~@k[12;79H[24;90H   [12;78H[24;104H8[12;78H[?25h[?25l[24;90H~@k[12;78H[24;90H   [12;77H[24;104H7[12;77H[?25h[?25l[24;90H~@k[12;77H[24;90H   [12;76H[106m[[11C][m[24;104H6[12;76H[?25h[?25l[24;90H~@k[12;76H[24;90H   [12;75Hy[[11C][24;104H5[12;75H[?25h[?25l[24;90H~@k[12;75H[24;90H   [12;74H[24;104H4[12;74H[?25h[?25l[24;90H~@k[12;74H[24;90H   [12;73H[24;104H3[12;73H[?25h[?25l[24;90H~@k[12;73H[24;90H   [12;72H[24;104H2[12;72H[?25h[?25l[24;90H~@k[12;72H[24;90H   [12;71H[24;104H1[12;71H[?25h[?25l[24;90H~@k[12;71H[24;90H   [12;70H[24;104H0[12;70H[?25h[?25l[24;90H~@k[12;70H[24;90H   [12;69H[24;103H69[12;69H[?25h[?25l[24;90H~@k[12;69H[24;90H   [12;68H[24;104H8[12;68H[?25h[?25l[24;90H~@k[12;68H[24;90H   [12;67H[24;104H7[12;67H[?25h[?25l[24;90H~@k[12;67H[24;90H   [12;66H[24;104H6[12;66H[?25h[?25l[24;90H~@k[12;66H[24;90H   [12;65H[106m()[m[24;104H5[12;65H[?25h[?25l[24;90H~@k[12;65H[24;90H   [12;64H[24;104H4[12;64H[?25h[?25l[24;90H~@k[12;64H[24;90H   [12;63He()[24;104H3[12;63H[?25h[?25l[24;90H~@k[12;63H[24;90H   [12;62H[24;104H2[12;62H[?25h[?25l[24;90H~@k[12;62H[24;90H   [12;61H[24;104H1[12;61H[?25h[?25l[24;90H~@k[12;61H[24;90H   [12;60H[24;104H0[12;60H[?25h[?25l[24;90H~@k[12;60H[24;90H   [12;59H[24;103H59[12;59H[?25h[?25l[24;90H~@k[12;59H[24;90H   [12;58H[24;104H8[12;58H[?25h[?25l[24;90H~@k[12;58H[24;90H   [12;57H[24;104H7[12;57H[?25h[?25l[24;90H~@k[12;57H[24;90H   [12;56H[24;104H6[12;56H[?25h[?25l[24;90H~@k[12;56H[24;90H   [12;55H[24;104H5[12;55H[?25h[?25l[24;90H~@k[12;55H[24;90H   [12;54H[24;104H4[12;54H[?25h[?25l[24;90H~@k[12;54H[24;90H   [12;53H[24;104H3[12;53H[?25h[?25l[24;90H~@k[12;53H[24;90H   [12;52H[24;104H2[12;52H[?25h[?25l[24;90H~@k[12;52H[24;90H   [12;51H[24;104H1[12;51H[?25h[?25l[24;90H~@k[12;51H[24;90H   [12;50H[24;104H0[12;50H[?25h[?25l[24;90H~@k[12;50H[24;90H   [12;49H[24;103H49[12;49H[?25h[?25l[24;90H~@k[12;49H[24;90H   [12;48H[24;104H8[12;48H[?25h[?25l[24;90H~@k[12;48H[24;90H   [12;47H[24;104H7[12;47H[?25h[?25l[24;90H~@k[12;47H[24;90H   [12;46H[24;104H6[12;46H[?25h[?25l[24;90H~@k[12;46H[24;90H   [12;45H[12;37H[106m[[7C][m[24;104H5[12;45H[?25h[?25l[24;90H~@k[12;45H[24;90H   [12;44H[12;37H[[7C][24;104H4[12;44H[?25h[?25l[24;90H~@k[12;44H[24;90H   [12;43H[24;104H3[12;43H[?25h[?25l[24;104H2[12;42H[?25h[?25l[24;90H~@k[12;42H[24;90H   [12;41H[24;104H1[12;41H[?25h[?25l[24;90H~@k[12;41H[24;90H   [12;40H[24;104H0[12;40H[?25h[?25l[24;90H~@k[12;40H[24;90H   [12;39H[24;103H39[12;39H[?25h[?25l[24;90H~@k[12;39H[24;90H   [12;38H[24;104H8[12;38H[?25h[?25l[24;90H~@k[12;38H[24;90H   [12;37H[106m[[7C][m[24;104H7[12;37H[?25h[?25l[24;90H~@k[12;37H[24;90H   [12;36Hy[[7C][24;104H6[12;36H[?25h[?25l[24;90H~@k[12;36H[24;90H   [12;35H[24;104H5[12;35H[?25h[?25l[24;90H~@k[12;35H[24;90H   [12;34H[24;104H4[12;34H[?25h[?25l[24;90H~@k[12;34H[24;90H   [12;33H[24;104H3[12;33H[?25h[?25l[24;90H~@k[12;33H[24;90H   [12;32H[24;104H2[12;32H[?25h[?25l[24;90H~@k[12;32H[24;90H   [12;31H[24;104H1[12;31H[?25h[?25l[24;90H~@k[12;31H[24;90H   [12;30H[24;104H0[12;30H[?25h[?25l[24;90H~@k[12;30H[24;90H   [12;29H[24;103H29[12;29H[?25h[?25l[24;90H~@k[12;29H[24;90H   [12;28H[24;104H8[12;28H[?25h[?25l[24;90H~@k[12;28H[24;90H   [12;27H[24;104H7[12;27H[?25h[?25l[24;90H~@k[12;27H[24;90H   [12;26H[24;104H6[12;26H[?25h[?25l[24;90H~@k[12;26H[24;90H   [12;25H[24;104H5[12;25H[?25h[?25l[24;90H~@k[12;25H[24;90H   [12;24H[24;104H4[12;24H[?25h[?25l[24;90H~@k[12;24H[24;90H   [12;23H[24;104H3[12;23H[?25h[?25l[24;90H~@k[12;23H[24;90H   [12;22H[24;104H2[12;22H[?25h[?25l[24;90H~@k[12;22H[24;90H   [12;21H[24;104H1[12;21H[?25h[?25l[24;90Hi[12;21H[24;90H [12;21H[24;1H[1m-- INSERT --[m[24;13H[K[24;100H60,21[9C31%[12;21H[?25h[?25l[24;104H2[12;22H[?25h[?25l > [31m0[m && library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;110H[K[24;104H1[12;21H[?25h[?25l > [31m0[m && library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[12;109H[K[24;104H0[12;20H[?25h[?25lD > [31m0[m && library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H1[12;21H[?25h[?25lX > [31m0[m && library[currIDX].getAuthorLastName() < library[currIDX - [31m1[m].getAuthorLastName()){[24;104H2[12;22H[?25h[24;1H[K[12;21H[?25l[24;90H^[[12;21H[24;90H  [12;22H[24;100H60,21[9C31%[12;21H[?25h[?25l[24;90H:[12;21H[24;90H[K[24;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"main.cpp" 175L, 4977C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ vim main.cppg++ -std=c++11 main.cpp Book.cpp -o hw5.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim main.cpp[Kg++ -std=c++11 main.cpp Book.cpp -o hw5.exe
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ g++ -std=c++11 main.cpp Book.cpp -o hw5.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim main.cpp[Kg++ -std=c++11 main.cpp Book.cpp -o hw5.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim main.cpp[Kg++ -std=c++11 main.cpp Book.cpp -o hw5.exe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim main.cpp[K[3P./hw5.exe
+Run time for insertion_sort algorithm: 6.57491 seconds
+Run time for selection_sort algorithm: 3.21953 seconds
+Run time for merge_sort algorithm: 0.009499 seconds
+Run time for quick_sort algorithm: 0.030771 seconds
+]0;phtran@turing: ~/pf2/hw5/LibraryHomework[01;32mphtran@turing[00m:[01;34m~/pf2/hw5/LibraryHomework[00m$ exit
+exit
+
+Script done on 2023-04-08 20:13:30-0500

@@ -1,0 +1,3 @@
+/Users/alextran/Desktop/LibraryHomework/cmake-build-debug/CMakeFiles/LibraryHomework.dir
+/Users/alextran/Desktop/LibraryHomework/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alextran/Desktop/LibraryHomework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
